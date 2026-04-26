@@ -53,7 +53,7 @@ export const work = [
     url: "https://www.accenture.com",
     role: "associate application developer",
     period: "nov 2021 – mar 2022",
-    location: "bangalore, india",
+    location: "pune, india",
     summary:
       "Trained in enterprise Java development at Accenture, building backend modules with a focus on OOP, multithreading, JDBC, and database connectivity in an enterprise application context.",
     tags: ["Java", "JDBC", "OOP", "Multithreading"],
