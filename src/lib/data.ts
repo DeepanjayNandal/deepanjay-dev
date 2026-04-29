@@ -11,7 +11,7 @@ export const personal = {
   bio: [
     "Software engineer focused on building reliable backend, AI, and security-focused systems.",
     "I currently work at Discover Excellence LLC on high-throughput event processing with Kafka, Redis, and BullMQ. Previously, I was a Senior Software Engineer at Ittiam Systems, where I worked on Android/AOSP security validation using Ghidra, Frida, and ClusterFuzz.",
-    "My recent projects include BitMod, a 9-layer AI inference cache; CaseTally, a legal RAG search platform over 33k+ U.S. Code chunks; and LexLink, a zero-knowledge secure messaging system.",
+    "My recent projects include BitMod, a 9-layer AI inference cache, CaseTally, a legal RAG search platform over 33k+ U.S. Code chunks, and LexLink, a zero-knowledge secure messaging system.",
   ],
 };
 
