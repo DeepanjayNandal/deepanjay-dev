@@ -9,9 +9,9 @@ export const personal = {
   openToWork: true,
   openToRelocate: true,
   bio: [
-    "Formerly a Senior Software Engineer at Ittiam Systems, I developed 40+ Android Compatibility Test Suites and used Ghidra, Frida, and ClusterFuzz to validate security patches across Android/AOSP components. I currently work at Discover Excellence LLC, where I build backend infrastructure for an AI-powered facility analytics platform, including Kafka-based data ingestion, Redis-backed resource coordination, BullMQ worker pipelines, and production observability for high-throughput event processing.",
-    "Currently pursuing an MS in Computer Software Engineering at Arizona State University, I focus on distributed systems, AI infrastructure, and secure software platforms. My recent work includes BitMod, a 9-layer AI inference cache for reducing redundant LLM inference, CaseTally, a hybrid legal RAG platform over 33k+ U.S. Code chunks, and LexLink, a zero-knowledge messaging system using ECDH key exchange and XChaCha20 encryption.",
-    "I am seeking software engineering opportunities where I can build scalable, reliable, and production-grade systems.",
+    "Software engineer focused on building reliable backend, AI, and security-focused systems.",
+    "I currently work at Discover Excellence LLC on high-throughput event processing with Kafka, Redis, and BullMQ. Previously, I was a Senior Software Engineer at Ittiam Systems, where I worked on Android/AOSP security validation using Ghidra, Frida, and ClusterFuzz.",
+    "My recent projects include BitMod, a 9-layer AI inference cache; CaseTally, a legal RAG search platform over 33k+ U.S. Code chunks; and LexLink, a zero-knowledge secure messaging system.",
   ],
 };
 
