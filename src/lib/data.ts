@@ -23,7 +23,7 @@ export const work = [
     period: "feb 2026 – present",
     location: "remote",
     summary:
-      "Engineered backend infrastructure for an AI-powered facility analytics platform, building Kafka-based event ingestion and Redis-backed coordination systems handling 100k+ daily events at sub-40ms p95 latency and 99.9% processing reliability.",
+      "Engineered backend infrastructure for an AI-powered eCommerce analytics platform, building Kafka-based event ingestion and Redis-backed coordination systems handling 100k+ daily events at sub-40ms p95 latency and 99.9% processing reliability.",
     tags: ["Kafka", "Redis", "BullMQ", "Node.js", "TypeScript"],
     bullets: [
       "Built a high-throughput visitor intelligence pipeline for an AI-powered eCommerce analytics platform, using Kafka to process 100k+ daily visitor events with sub-40ms p95 latency.",
