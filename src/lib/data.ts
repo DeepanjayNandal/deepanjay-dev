@@ -26,7 +26,7 @@ export const work = [
       "Engineered backend infrastructure for an AI-powered facility analytics platform, building Kafka-based event ingestion and Redis-backed coordination systems handling 100k+ daily events at sub-40ms p95 latency and 99.9% processing reliability.",
     tags: ["Kafka", "Redis", "BullMQ", "Node.js", "TypeScript"],
     bullets: [
-      "Built a high-throughput data pipeline for an AI-powered facility analytics platform, using Kafka to ingest 100k+ daily facility events with sub-40ms p95 processing latency.",
+      "Built a high-throughput visitor intelligence pipeline for an AI-powered eCommerce analytics platform, using Kafka to process 100k+ daily visitor events with sub-40ms p95 latency.",
       "Designed a multi-tenant resource manager using Redis locks, preventing worker contention and enforcing fair resource usage across client workloads.",
       "Implemented reliable background processing with BullMQ, retries, exponential backoff, and idempotency keys, achieving 99.9% event-processing reliability.",
       "Improved production observability with structured logging, health checks, root-cause analysis workflows, and integration tests, reducing debugging effort across ingestion and analytics pipelines.",
