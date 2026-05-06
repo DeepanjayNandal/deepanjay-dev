@@ -18,7 +18,7 @@ export const personal = {
 export const work = [
   {
     company: "discover excellence llc",
-    url: "https://www.linkedin.com/company/discover-excellence-llc/posts/?feedView=all",
+    url: "https://dexusa.com/",
     role: "software engineering intern",
     period: "feb 2026 – present",
     location: "remote",
