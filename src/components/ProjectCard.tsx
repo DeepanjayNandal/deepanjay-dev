@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
 
 interface Project {
   title: string;
   description: string;
   url: string;
+  demoUrl?: string;
   period: string;
   institution?: string;
   bullets: string[];
@@ -70,6 +71,16 @@ export default function ProjectCard({ project }: { project: Project }) {
             <p className="text-sm text-neutral-600 dark:text-gray-300">
               {project.note}
             </p>
+          )}
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-accent hover:underline"
+            >
+              demo <ArrowUpRight className="w-3 h-3" />
+            </a>
           )}
           <div>
             <p className="text-xs text-neutral-900 dark:text-white uppercase tracking-widest mb-3">
