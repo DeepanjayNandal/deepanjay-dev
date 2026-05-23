@@ -60,14 +60,16 @@ export const work = [
     period: "mar 2022 – jun 2024",
     location: "bangalore, india",
     summary:
-      "Built Android/AOSP security validation workflows for Google STS/CTS testing, including compatibility test-suite development, reverse engineering, fuzzing automation, runtime instrumentation, and vulnerability triage.",
-    tags: ["Python", "Android/AOSP", "Ghidra", "Frida", "ClusterFuzz", "Reverse Engineering"],
+      "Built Android/AOSP security validation workflows across Google STS/CTS testing, vulnerability reproduction, patch validation, reverse engineering, runtime instrumentation, crash triage, and regression automation.",
+    tags: ["Python", "Android/AOSP", "CTS", "STS", "Ghidra", "Frida", "ClusterFuzz", "Reverse Engineering", "Vulnerability Triage", "Binary Analysis"],
     featured: true,
     bullets: [
-      "Authored 40+ Android Compatibility Test Suites across Bluetooth, Media, and core AOSP modules to automate vulnerability reproduction and regression coverage.",
-      "Reverse engineered Android framework, native, and OEM partner binaries using Ghidra and assembly analysis to validate security patch coverage for 50+ CVEs.",
-      "Built Python-based fuzzing and triage automation with ClusterFuzz, reducing crash analysis time by 40%.",
-      "Used Frida to hook private Android framework methods and expand vulnerability validation coverage beyond standard test workflows.",
+      "Built modular Android/AOSP security validation infrastructure across Bluetooth, Media, and core platform modules, integrating 40+ reusable CTS/STS suites to automate vulnerability reproduction and regression coverage.",
+      "Led Ghidra-based binary and assembly analysis across Android framework, native, and OEM partner builds, validating security patch coverage for 50+ CVEs and strengthening regression confidence.",
+      "Engineered Python automation pipelines around ClusterFuzz crash outputs for fuzzing analysis, crash triage, and CVE validation workflows, reducing manual investigation time by 40%.",
+      "Instrumented dynamic analysis using Frida runtime hooks to validate private Android framework execution paths, expanding coverage for Java-layer CVE validation beyond standard test workflows.",
+      "Produced vulnerability triage reports, reproduction artifacts, proof-of-concept notes, and root-cause analysis documentation for Android security issues.",
+      "Mentored 4 junior engineers on CTS/STS test authoring, crash triage, code reviews, debugging workflows, and security validation practices.",
     ],
   },
   {
