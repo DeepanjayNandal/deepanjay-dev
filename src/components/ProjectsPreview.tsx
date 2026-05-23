@@ -21,9 +21,9 @@ export default function ProjectsPreview() {
                 <h3 className="text-xl font-semibold mb-2 text-neutral-900 dark:text-white transition-colors duration-200">
                   {project.title}
                 </h3>
-                {project.note && (
+                {(project as { note?: string }).note && (
                   <p className="text-neutral-700 dark:text-gray-200 leading-relaxed mb-1">
-                    {project.note}
+                    {(project as { note?: string }).note}
                   </p>
                 )}
                 <p className="text-neutral-700 dark:text-gray-200 leading-relaxed">
@@ -35,9 +35,9 @@ export default function ProjectsPreview() {
                 <h3 className="text-xl font-semibold mb-2 text-neutral-900 dark:text-white transition-colors duration-200">
                   {project.title}
                 </h3>
-                {project.note && (
+                {(project as { note?: string }).note && (
                   <p className="text-neutral-700 dark:text-gray-200 leading-relaxed mb-1">
-                    {project.note}
+                    {(project as { note?: string }).note}
                   </p>
                 )}
                 <p className="text-neutral-700 dark:text-gray-200 leading-relaxed">

@@ -59,9 +59,9 @@ export const work = [
       "Completed enterprise application development training focused on Java, object-oriented programming, multithreading, JDBC, SQL, and backend development fundamentals.",
     tags: ["Java", "JDBC", "OOP", "Multithreading", "SQL"],
     bullets: [
-      "Worked on Java fundamentals, object-oriented programming, multithreading, and JDBC.",
-      "Developed small backend modules using Java APIs with a focus on clean code and maintainability.",
-      "Practiced database connectivity and backend development workflows used in enterprise applications.",
+      "Completed enterprise backend training in Java, object-oriented programming, multithreading, JDBC, and application development fundamentals.",
+      "Built small Java API modules with a focus on clean code, maintainability, and basic backend design.",
+      "Practiced SQL database connectivity and enterprise development workflows used in production-style backend projects.",
     ],
   },
   {
@@ -71,12 +71,12 @@ export const work = [
     period: "may 2020 – jun 2020",
     location: "remote",
     summary:
-      "Supported frontend development and coding-solution content for a student placement preparation platform.",
+      "Worked with the development team on a placement preparation platform, contributing to educational web pages, responsive student-facing interfaces, and coding-solution content.",
     tags: ["React", "JavaScript", "HTML/CSS", "Web Development"],
     bullets: [
-      "Built responsive web interfaces for placement preparation pages using React and JavaScript.",
-      "Developed 50+ JavaScript coding solutions for student placement quizzes, focusing on accurate logic and readable explanations.",
-      "Updated educational pages and improved frontend usability across desktop and mobile views.",
+      "Built responsive web interfaces using React for student-facing placement preparation pages.",
+      "Developed 50+ JavaScript-based coding solutions for student placement quizzes, focusing on accurate logic and readable explanations.",
+      "Updated educational web pages and improved frontend usability across desktop and mobile views.",
     ],
   },
 ];
@@ -112,7 +112,6 @@ export const projects = [
       "Projected up to 96% cost savings at scale by combining high cache-hit rates with token-reduction strategies for unresolved model calls.",
     ],
     tags: ["Python", "FastAPI", "Embeddings", "Vector Search", "LLM Caching", "Semantic Caching", "Backend Infrastructure"],
-    note: "private repository",
     featured: true,
   },
   {
@@ -144,22 +143,6 @@ export const projects = [
     ],
     tags: ["AWS EC2", "Amazon SQS", "AWS Lambda", "Amazon ECR", "AWS IoT Greengrass", "MQTT", "Python", "Docker", "PyTorch", "MTCNN", "FaceNet"],
     featured: true,
-  },
-  {
-    title: "Personal Network Guard — AI-Powered Network Security Platform",
-    description:
-      "A cross-platform network security product that helps non-technical users identify vulnerable devices, suspicious network behavior, and actionable remediation steps through local scanning, threat intelligence, and AI-generated security summaries.",
-    url: "",
-    period: "co-founder / founding engineer (march 2026 – present)",
-    bullets: [
-      "Co-founded and built a full-stack security product from 0→1 across Tauri desktop, iOS, Android, FastAPI cloud services, and a Python-based network sensor.",
-      "Architected a cross-platform threat-intelligence pipeline ingesting 10+ sources including NVD, CISA KEV, VirusTotal, MITRE ATT&CK, and GreyNoise, with HMAC-signed sensor payloads for tamper-resistant scan delivery.",
-      "Integrated a local LLM using Ollama/Gemma to generate plain-English threat narratives from CVE, device, and network-risk signals for non-technical users.",
-      "Reduced enterprise adoption risk by enforcing a license-clean dependency bundle using Apache 2.0, MIT, and BSD-compatible packages while excluding GPL-licensed dependencies.",
-    ],
-    tags: ["Python", "FastAPI", "Tauri", "SwiftUI", "Jetpack Compose", "Ollama", "Gemma", "HMAC", "NVD", "CISA KEV", "MITRE ATT&CK", "VirusTotal", "Network Security"],
-    note: "current startup product | private repository",
-    featured: false,
   },
   {
     title: "WeVibe — Real-Time Matchmaking & Dating Platform",
