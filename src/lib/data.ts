@@ -119,7 +119,7 @@ export const projects = [
     description:
       "Hybrid legal retrieval platform over U.S. Code data using custom XML ingestion, BM25 + HNSW pgvector retrieval, query rewriting, and retrieval-quality evaluation.",
     url: "https://github.com/DeepanjayNandal/casetally",
-    period: "june 2025 – dec 2025",
+    period: "june 2025",
     bullets: [
       "Developed a hybrid legal retrieval engine combining BM25 keyword search and HNSW-indexed pgvector semantic similarity across 33,000+ U.S. Code chunks parsed through custom govinfo.gov XML ingestion.",
       "Implemented query rewriting to normalize conversational legal questions into statutory terminology, improving retrieval quality for ambiguous legal queries.",
@@ -134,7 +134,7 @@ export const projects = [
     description:
       "A cloud and edge-based machine learning infrastructure project that evolved a face-recognition pipeline from EC2 autoscaling to serverless inference and edge-cloud processing using AWS SQS, Lambda, ECR, and IoT Greengrass.",
     url: "",
-    period: "august 2025",
+    period: "august 2025 – december 2025",
     institution: "arizona state university",
     bullets: [
       "Scaled face-recognition inference using MTCNN and FaceNet in PyTorch across 15 Amazon EC2 instances with a custom SQS-depth autoscaler, achieving 0.96s average latency under 100 concurrent requests with 100% classification accuracy.",
