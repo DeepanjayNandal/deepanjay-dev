@@ -3,11 +3,13 @@ import SectionHeading from "./SectionHeading";
 import ArrowLink from "./ArrowLink";
 
 export default function WorkSection() {
+  const featured = work.filter((job) => job.featured);
+
   return (
     <section className="mb-16 animate-fade-in-up">
       <SectionHeading>work</SectionHeading>
       <div className="space-y-8">
-        {work.map((job) => (
+        {featured.map((job) => (
           <div key={job.company}>
             <a
               href={job.url}

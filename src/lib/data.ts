@@ -26,11 +26,31 @@ export const work = [
     summary:
       "Built backend infrastructure for an AI-powered eCommerce analytics platform, including Kafka event pipelines, Redis coordination systems, BullMQ workers, and production reliability tooling.",
     tags: ["Kafka", "Redis", "BullMQ", "Node.js", "TypeScript"],
+    featured: true,
     bullets: [
       "Built a Kafka-based visitor intelligence pipeline processing 100k+ daily eCommerce events with sub-40ms p95 latency.",
       "Designed a Redis-backed multi-tenant resource manager to prevent worker contention and enforce fair resource usage across client workloads.",
       "Implemented BullMQ background workers with retries, exponential backoff, and idempotency keys, achieving 99.9% event-processing reliability.",
       "Improved production observability through structured logging, health checks, root-cause analysis workflows, and integration tests across ingestion and analytics pipelines.",
+    ],
+  },
+  {
+    company: "appy.yo",
+    url: "https://appyyo.vercel.app/",
+    role: "graduate capstone developer",
+    period: "jan 2026 – apr 2026",
+    location: "tempe, az · remote",
+    summary:
+      "Worked on WeVibe, an Appy.yo-sponsored ASU SER 517 Software Factory Capstone project for a real-time iOS matchmaking platform with algorithmic pairing, geo-filtering, persistent chat, AI-assisted profile generation, and a Node.js/PostgreSQL backend.",
+    tags: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "Prisma", "Socket.IO", "Redis", "Firebase Authentication", "Google Cloud Run", "REST APIs", "JWT", "Jest"],
+    featured: true,
+    bullets: [
+      "Built backend components for real-time speed dating and messaging using Node.js, Socket.IO, and Redis pub/sub, supporting event relay across concurrent server instances.",
+      "Developed matchmaking and geo-filtering workflows using PostgreSQL, PostGIS, and advisory locks to prevent duplicate pairing and race conditions during concurrent user matching.",
+      "Built REST APIs using Express.js and TypeScript with a layered architecture across routes, controllers, services, and Prisma repositories, enforcing Firebase JWT authentication middleware and centralized structured error handling.",
+      "Integrated Google Gemini 2.5 Flash for AI-assisted profile bio generation with prompt constraints, rate limiting, and output validation.",
+      "Deployed backend services on Google Cloud Run using Prisma ORM, Firebase Authentication, and signed Google Cloud Storage URLs for secure media uploads.",
+      "Contributed to 17 Jest integration test suites covering authentication, matchmaking, real-time chat, soft delete, and Apple Sign-In revocation flows.",
     ],
   },
   {
@@ -42,6 +62,7 @@ export const work = [
     summary:
       "Built Android/AOSP security validation workflows for Google STS/CTS testing, including compatibility test-suite development, reverse engineering, fuzzing automation, runtime instrumentation, and vulnerability triage.",
     tags: ["Python", "Android/AOSP", "Ghidra", "Frida", "ClusterFuzz", "Reverse Engineering"],
+    featured: true,
     bullets: [
       "Authored 40+ Android Compatibility Test Suites across Bluetooth, Media, and core AOSP modules to automate vulnerability reproduction and regression coverage.",
       "Reverse engineered Android framework, native, and OEM partner binaries using Ghidra and assembly analysis to validate security patch coverage for 50+ CVEs.",
@@ -58,6 +79,7 @@ export const work = [
     summary:
       "Completed enterprise application development training focused on Java, object-oriented programming, multithreading, JDBC, SQL, and backend development fundamentals.",
     tags: ["Java", "JDBC", "OOP", "Multithreading", "SQL"],
+    featured: false,
     bullets: [
       "Completed enterprise backend training in Java, object-oriented programming, multithreading, JDBC, and application development fundamentals.",
       "Built small Java API modules with a focus on clean code, maintainability, and basic backend design.",
@@ -73,6 +95,7 @@ export const work = [
     summary:
       "Worked with the development team on a placement preparation platform, contributing to educational web pages, responsive student-facing interfaces, and coding-solution content.",
     tags: ["React", "JavaScript", "HTML/CSS", "Web Development"],
+    featured: false,
     bullets: [
       "Built responsive web interfaces using React for student-facing placement preparation pages.",
       "Developed 50+ JavaScript-based coding solutions for student placement quizzes, focusing on accurate logic and readable explanations.",
@@ -150,7 +173,7 @@ export const projects = [
       "Appy.yo-sponsored ASU Software Factory Capstone project for a real-time iOS dating platform featuring algorithmic matchmaking, geo-filtering, persistent chat, and a Node.js/PostgreSQL backend.",
     url: "https://github.com/DeepanjayNandal/weVibe-app",
     demoUrl: "https://www.youtube.com/watch?v=il7ff0XOEFY",
-    period: "backend developer (jan 2025 – apr 2025)",
+    period: "backend developer (jan 2026 – apr 2026)",
     institution: "appy.yo | asu ser 517 software factory capstone, team 19",
     bullets: [
       "Built backend components for real-time speed dating and messaging using Node.js, Socket.IO, and Redis pub/sub, supporting event relay across concurrent server instances.",
