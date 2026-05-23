@@ -104,7 +104,7 @@ export const projects = [
     description:
       "An AI inference cache and semantic reuse engine designed to reduce repeated LLM calls, improve cached-response latency, and control unsafe reuse across context-dependent queries.",
     url: "",
-    period: "founding technical engineer (november 2025)",
+    period: "founding technical engineer (january 2026)",
     bullets: [
       "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, TTL/LRU eviction, and Bayesian evidence scoring, achieving up to 94% cache-hit rate in benchmark runs.",
       "Reduced cached-response latency to 71ms on average against a 12.5s uncached LLM-generation baseline, producing a measured 176x speedup for cache-resolved requests.",
@@ -119,7 +119,7 @@ export const projects = [
     description:
       "Hybrid legal retrieval platform over U.S. Code data using custom XML ingestion, BM25 + HNSW pgvector retrieval, query rewriting, and retrieval-quality evaluation.",
     url: "https://github.com/DeepanjayNandal/casetally",
-    period: "creator (june 2025 – dec 2025)",
+    period: "june 2025 – dec 2025",
     bullets: [
       "Developed a hybrid legal retrieval engine combining BM25 keyword search and HNSW-indexed pgvector semantic similarity across 33,000+ U.S. Code chunks parsed through custom govinfo.gov XML ingestion.",
       "Implemented query rewriting to normalize conversational legal questions into statutory terminology, improving retrieval quality for ambiguous legal queries.",
@@ -134,7 +134,7 @@ export const projects = [
     description:
       "A cloud and edge-based machine learning infrastructure project that evolved a face-recognition pipeline from EC2 autoscaling to serverless inference and edge-cloud processing using AWS SQS, Lambda, ECR, and IoT Greengrass.",
     url: "",
-    period: "creator (august 2025)",
+    period: "august 2025",
     institution: "arizona state university",
     bullets: [
       "Scaled face-recognition inference using MTCNN and FaceNet in PyTorch across 15 Amazon EC2 instances with a custom SQS-depth autoscaler, achieving 0.96s average latency under 100 concurrent requests with 100% classification accuracy.",
@@ -150,7 +150,7 @@ export const projects = [
       "Appy.yo-sponsored ASU Software Factory Capstone project for a real-time iOS dating platform featuring algorithmic matchmaking, geo-filtering, persistent chat, and a Node.js/PostgreSQL backend.",
     url: "https://github.com/DeepanjayNandal/weVibe-app",
     demoUrl: "https://www.youtube.com/watch?v=il7ff0XOEFY",
-    period: "backend contributor (jan 2025 – apr 2025)",
+    period: "backend developer (jan 2025 – apr 2025)",
     institution: "appy.yo | asu ser 517 software factory capstone, team 19",
     bullets: [
       "Built backend components for real-time speed dating and messaging using Node.js, Socket.IO, and Redis pub/sub, supporting event relay across concurrent server instances.",
@@ -166,7 +166,7 @@ export const projects = [
     description:
       "A zero-knowledge attorney-client messaging system using peer-to-peer WebRTC communication, out-of-band authentication, and ephemeral cryptography to keep the signaling server blind to message content.",
     url: "https://github.com/DeepanjayNandal/lexlink",
-    period: "creator (january 2025 – april 2025)",
+    period: "january 2025 – april 2025",
     bullets: [
       "Engineered a zero-knowledge messaging architecture using WebRTC DataChannels and a stateless Node.js signaling relay, where the server brokers only SDP/ICE handshakes and exits the message path once the peer-to-peer channel is established.",
       "Implemented end-to-end encryption using ECDH-25519 key exchange, HKDF-SHA-256 directional key derivation, and XChaCha20-Poly1305 AEAD, keeping message contents protected from the relay server.",
@@ -181,7 +181,7 @@ export const projects = [
     description:
       "A semantic web application using RDF/OWL knowledge graphs and SPARQL queries to compute nutritional profiles and suggest healthier ingredient alternatives.",
     url: "https://github.com/DeepanjayNandal/Nutritional-Calculator-Web-App",
-    period: "contributor (september 2024 – november 2024)",
+    period: "backend developer (september 2024 – november 2024)",
     institution: "arizona state university",
     bullets: [
       "Built a Next.js/Node.js application that queries RDF/OWL nutrition data through SPARQL, mapping ingredient inputs to structured nutritional relationships.",
