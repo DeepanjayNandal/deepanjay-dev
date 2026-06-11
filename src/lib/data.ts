@@ -1,7 +1,7 @@
 export const personal = {
   name: "deepanjay nandal",
   role: "backend & ai infrastructure engineer",
-  location: "seattle, wa",
+  location: "bengaluru, karnataka, india",
   email: "deepanjay.nandal12@gmail.com",
   github: "https://github.com/DeepanjayNandal",
   linkedin: "https://www.linkedin.com/in/deepanjay-nandal/",
