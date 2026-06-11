@@ -7,7 +7,7 @@ export const personal = {
   linkedin: "https://www.linkedin.com/in/deepanjay-nandal/",
   resume: "/resume.pdf",
   openToWork: true,
-  openToRelocate: true,
+  openToRelocate: false,
   bio: [
     "Backend & AI Infrastructure Engineer focused on distributed systems, RAG/LLM systems, and security-aware backend design.",
     "I build backend systems for AI and data-heavy products, with experience across Kafka/Redis event pipelines, LLM inference caching, hybrid retrieval systems, cloud ML infrastructure, real-time product backends, and Android/AOSP security validation.",
