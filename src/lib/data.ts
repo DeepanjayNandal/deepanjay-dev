@@ -21,7 +21,7 @@ export const work = [
     company: "discover excellence llc",
     url: "https://dexusa.com/",
     role: "software engineering intern",
-    period: "feb 2026 – may 2026",
+    period: "jan 2026 – jun 2026",
     location: "remote",
     summary:
       "Built and deployed production backend infrastructure for an AI-powered eCommerce analytics platform, focusing on high-throughput event processing, real-time personalization, and fault-tolerant job execution.",
