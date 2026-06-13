@@ -9,10 +9,10 @@ export const personal = {
   openToWork: true,
   openToRelocate: false,
   bio: [
-    "Backend & AI Infrastructure Engineer focused on distributed systems, RAG/LLM systems, and security-aware backend design.",
-    "I build backend systems for AI and data-heavy products, with experience across Kafka/Redis event pipelines, LLM inference caching, hybrid retrieval systems, cloud ML infrastructure, real-time product backends, and Android/AOSP security validation.",
-    "At Discover Excellence LLC, I built backend infrastructure for an AI-enabled eCommerce analytics platform, including Kafka-based event processing, Redis-backed coordination, BullMQ background workers, and production reliability tooling. Previously, I worked at Ittiam Systems on Android/AOSP security validation, reverse engineering, test automation, and vulnerability triage using Ghidra, Frida, Python, and ClusterFuzz.",
-    "My recent projects include BitMod, an AI inference cache and semantic reuse engine; CaseTally, a hybrid legal retrieval platform; Elastic Face Recognition, a cloud and edge ML infrastructure system; Personal Network Guard, an AI-powered network security platform; WeVibe, an Appy.yo-sponsored real-time matchmaking platform; and LexLink, a zero-knowledge secure messaging system.",
+    "Backend & AI Infrastructure Engineer with experience across distributed systems, real-time backends, LLM/RAG infrastructure, cloud ML pipelines, and Android/AOSP security validation.",
+    "I build production backend systems for AI-powered and data-intensive products: event-driven pipelines, inference caching, hybrid retrieval, real-time platform backends, and containerized cloud deployments.",
+    "At Discover Excellence LLC, I built eCommerce analytics infrastructure with Kafka event processing, Redis-based real-time personalization, and fault-tolerant BullMQ job execution. At Appy.yo, I engineered the backend for WeVibe, a real-time iOS matchmaking platform with geo-filtering, AI bio generation, and containerized deployment. Previously at Ittiam Systems, I delivered CVE validation infrastructure for Google's Android Security team across binary analysis, fuzzing automation, and submission pipelines.",
+    "My recent projects include BitMod, a 9-layer AI inference cache; CaseTally, a hybrid legal RAG platform; Elastic Face Recognition, a cloud and edge ML pipeline; and LexLink, a zero-knowledge secure messaging system.",
   ],
 };
 
