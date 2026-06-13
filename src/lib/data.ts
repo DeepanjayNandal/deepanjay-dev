@@ -9,10 +9,10 @@ export const personal = {
   openToWork: true,
   openToRelocate: false,
   bio: [
-    "Backend & AI Infrastructure Engineer with experience across distributed systems, real-time backends, LLM/RAG infrastructure, cloud ML pipelines, and Android/AOSP security validation.",
-    "I build production backend systems for AI-powered and data-intensive products: event-driven pipelines, inference caching, hybrid retrieval, real-time platform backends, and containerized cloud deployments.",
-    "At Discover Excellence LLC, I built eCommerce analytics infrastructure with Kafka event processing, Redis-based real-time personalization, and fault-tolerant BullMQ job execution. At Appy.yo, I engineered the backend for WeVibe, a real-time iOS matchmaking platform with geo-filtering, AI bio generation, and containerized deployment. Previously at Ittiam Systems, I delivered CVE validation infrastructure for Google's Android Security team across binary analysis, fuzzing automation, and submission pipelines.",
-    "My recent projects include BitMod, a 9-layer AI inference cache; CaseTally, a hybrid legal RAG platform; Elastic Face Recognition, a cloud and edge ML pipeline; and LexLink, a zero-knowledge secure messaging system.",
+    "Backend and AI infrastructure engineer who builds and delivers production systems for clients, including Google's Android Security team. I work across distributed systems, real-time backends, LLM and RAG infrastructure, and cloud ML pipelines.",
+    "Most of my work sits where backend engineering meets AI and data-heavy products: event-driven pipelines, LLM inference caching, hybrid retrieval, real-time platform backends, and containerized cloud deployments. I care about the parts that decide whether a system holds up in production, latency, fault tolerance, and clean failure behavior under load.",
+    "At Discover Excellence I built the backend for an AI-powered eCommerce analytics platform, with Kafka event processing, Redis-based real-time personalization, and a fault-tolerant BullMQ job pipeline. At Appy.yo I engineered the backend for WeVibe, a real-time iOS matchmaking platform, taking it from client requirements through production deployment with geo-filtering, AI bio generation, and containerized infrastructure. Before that, at Ittiam Systems, I delivered CVE validation infrastructure for Google's Android Security team, working directly with their engineers across binary analysis, fuzzing automation, and submission pipelines.",
+    "Recent projects include BitMod, a 9-layer AI inference cache; CaseTally, a hybrid legal RAG platform; Elastic Face Recognition, a cloud and edge ML pipeline; and LexLink, a zero-knowledge secure messaging system.",
   ],
 };
 
