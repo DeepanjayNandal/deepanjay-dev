@@ -32,7 +32,6 @@ export const work = [
       "Designed an in-memory Redis collaborative filtering layer for real-time product affinity scoring across multi-tenant workloads, lifting conversion by 28%.",
       "Served personalized product feeds at the edge via Cloudflare, achieving 92% cache hit rate and sub-30ms p95 latency for multi-tenant deployments.",
       "Implemented a fault-tolerant BullMQ background pipeline handling 50k+ daily jobs with guaranteed job delivery through persistent state, retries, exponential backoff, and idempotency keys.",
-      "Worked across event-driven architecture, distributed caching, multi-tenant isolation, and async job processing, contributing to a platform combining real-time analytics with AI-driven personalization.",
     ],
   },
   {
@@ -50,7 +49,6 @@ export const work = [
       "Implemented geo-filtering and race-condition-free concurrent pairing using PostGIS and PostgreSQL advisory locks across a 50km radius with a 2-day rematch cooldown.",
       "Integrated Google Gemini 2.5 Flash for AI-assisted bio generation with a custom prompt-injection guard, rate limiting (5 bios/day, 60s cooldown), and output validation, scoped to the sponsor's product requirements.",
       "Deployed on Google Cloud Run via Docker with Firebase JWT authentication, Apple Sign-In with revocation, and signed Cloud Storage uploads, validated end-to-end across 17 Jest integration suites.",
-      "Turned ambiguous product requirements into a tested, deployed platform through iterative review cycles with the Appy.yo sponsor.",
     ],
   },
   {
@@ -68,7 +66,7 @@ export const work = [
       "Introduced Ghidra-based binary analysis of the Android Bluetooth stack, converting 50+ CVEs previously marked infeasible by Google into fully validated submissions adopted as the team-wide methodology.",
       "Engineered a Frida instrumentation framework in Python and Java to hook private Android methods at runtime, enabling reproduction of 30+ CVEs that standard testing could not reach.",
       "Built a GCP Python pipeline to ingest ClusterFuzz crash outputs across Dockerized environments, auto-classifying reports by CVSS severity into a PostgreSQL-backed schema, cutting manual triage overhead by 35%.",
-      "Automated Google Gerrit CI/CD workflows via idempotent webhook-triggered Python scripts, handling 30 to 40 CVE submissions per month through async event-driven pipelines.",
+      "Automated Google Gerrit CI/CD workflows via idempotent webhook-triggered Python scripts, handling 30 to 40 CVE submissions per month.",
     ],
   },
   {
