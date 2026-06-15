@@ -11,7 +11,7 @@ export const personal = {
   bio: [
     "Backend and AI infrastructure engineer who builds and delivers production systems for clients, including Google's Android Security team. I work across distributed systems, real-time backends, LLM and RAG infrastructure, and cloud ML pipelines.",
     "Most of my work sits where backend engineering meets AI and data-heavy products: event-driven pipelines, LLM inference caching, hybrid retrieval, real-time platform backends, and containerized cloud deployments. I care about the parts that decide whether a system holds up in production, latency, fault tolerance, and clean failure behavior under load.",
-    "At Discover Excellence I built the backend for an AI-powered eCommerce analytics platform, with Kafka event processing, Redis-based real-time personalization, and a fault-tolerant BullMQ job pipeline. At Appy.yo I engineered the backend for WeVibe, a real-time iOS matchmaking platform, taking it from client requirements through production deployment with geo-filtering, AI bio generation, and containerized infrastructure. Before that, at Ittiam Systems, I delivered CVE validation infrastructure for Google's Android Security team, working directly with their engineers across binary analysis, fuzzing automation, and submission pipelines.",
+    "At Discover Excellence I built the backend for an AI-powered eCommerce analytics platform, with Kafka event processing, Redis-based real-time personalization, and a fault-tolerant BullMQ job pipeline. At Appy.yo I engineered the backend for WeVibe, a real-time iOS matchmaking platform, taking it from client requirements through to deployment on Google Cloud Run with geo-filtering, AI bio generation, and containerized infrastructure. Before that, at Ittiam Systems, I delivered CVE validation infrastructure for Google's Android Security team, authoring security tests merged into AOSP alongside binary analysis and fuzzing automation.",
     "Recent projects include BitMod, a 9-layer AI inference cache; CaseTally, a hybrid legal RAG platform; Elastic Face Recognition, a cloud and edge ML pipeline; and LexLink, a zero-knowledge secure messaging system.",
   ],
 };
@@ -29,7 +29,7 @@ export const work = [
     featured: true,
     bullets: [
       "Built a high-throughput Kafka-based visitor intelligence pipeline processing 100k+ daily behavioral events at sub-40ms p95 latency, driving targeted discount outreach via AWS SES across eCommerce client stores.",
-      "Designed an in-memory Redis collaborative filtering layer for real-time product affinity scoring across multi-tenant workloads, lifting conversion by 28%.",
+      "Designed an in-memory Redis collaborative filtering layer for real-time product affinity scoring across multi-tenant workloads, driving a measurable lift in conversion.",
       "Served personalized product feeds at the edge via Cloudflare, achieving 92% cache hit rate and sub-30ms p95 latency for multi-tenant deployments.",
       "Implemented a fault-tolerant BullMQ background pipeline handling 50k+ daily jobs with guaranteed job delivery through persistent state, retries, exponential backoff, and idempotency keys.",
     ],
@@ -41,7 +41,7 @@ export const work = [
     period: "jan 2026 – apr 2026",
     location: "tempe, az · remote",
     summary:
-      "Worked as backend engineer on WeVibe, an Appy.yo-sponsored ASU SER 517 Software Factory Capstone, delivering a real-time iOS matchmaking platform from client requirements through production deployment.",
+      "Worked as backend engineer on WeVibe, an Appy.yo-sponsored ASU SER 517 Software Factory Capstone, building a real-time iOS matchmaking platform from client requirements through to deployment on Google Cloud Run.",
     tags: ["Node.js", "TypeScript", "PostgreSQL", "PostGIS", "Socket.IO", "Upstash Redis", "Prisma", "Firebase Authentication", "Google Cloud Run", "Docker", "Google Gemini", "Jest"],
     featured: true,
     bullets: [
@@ -58,13 +58,13 @@ export const work = [
     period: "mar 2022 – jun 2024",
     location: "bangalore, india",
     summary:
-      "Built CVE validation infrastructure for Google's Android Security team, working directly with Google engineers on vulnerability reproduction, binary analysis, and automated submission pipelines across multiple Android releases.",
+      "Built CVE validation tooling and automated pipelines for Google's Android Security team, working directly with Google engineers across vulnerability reproduction, binary analysis, and security test authorship upstreamed into AOSP.",
     tags: ["Python", "Android/AOSP", "CTS", "STS", "Ghidra", "Frida", "ClusterFuzz", "PostgreSQL", "GCP", "Docker", "REST APIs", "Google Gerrit", "Binary Analysis"],
     featured: true,
     bullets: [
-      "Delivered CVE validation infrastructure via automated Python workflows and REST APIs, managing 50+ vulnerability submissions and 40+ CTS/STS suites directly with Google engineers.",
-      "Introduced Ghidra-based binary analysis of the Android Bluetooth stack, converting 50+ CVEs previously marked infeasible by Google into fully validated submissions adopted as the team-wide methodology.",
-      "Engineered a Frida instrumentation framework in Python and Java to hook private Android methods at runtime, enabling reproduction of 30+ CVEs that standard testing could not reach.",
+      "Authored 50+ CTS/STS validation tests, each proving a CVE patch, merged into the public Android Open Source Project (AOSP) through Google's review and Gerrit submission process.",
+      "Developed a Ghidra-based binary analysis approach for the Android Bluetooth stack that Google had marked infeasible, adopted as the team-wide standard and enabling 40+ Bluetooth CVEs to be validated to date.",
+      "Engineered a Frida instrumentation framework in Python and Java to hook private Android methods at runtime, enabling the team to reproduce 30+ CVEs that standard testing could not reach.",
       "Built a GCP Python pipeline to ingest ClusterFuzz crash outputs across Dockerized environments, auto-classifying reports by CVSS severity into a PostgreSQL-backed schema, cutting manual triage overhead by 35%.",
       "Automated Google Gerrit CI/CD workflows via idempotent webhook-triggered Python scripts, handling 30 to 40 CVE submissions per month.",
     ],
@@ -125,8 +125,8 @@ export const projects = [
     title: "BitMod — AI Inference Cache & Semantic Reuse Engine",
     description:
       "An AI inference cache and semantic reuse engine designed to reduce repeated LLM calls, improve cached-response latency, and control unsafe reuse across context-dependent queries.",
-    url: "",
-    period: "founding technical engineer (january 2026)",
+    url: "TODO_GITHUB_LINK",
+    period: "personal project (january 2026)",
     bullets: [
       "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, TTL/LRU eviction, and Bayesian evidence scoring, achieving up to 94% cache-hit rate in benchmark runs.",
       "Reduced cached-response latency to 71ms on average against a 12.5s uncached LLM-generation baseline, producing a measured 176x speedup for cache-resolved requests.",
