@@ -217,7 +217,7 @@ export const projects = [
 export const skills = [
   {
     category: "languages",
-    items: "Java, Python, JavaScript, TypeScript, Node.js, SQL, Dart",
+    items: "Java, Python, Node.js, SQL, Dart",
   },
   {
     category: "backend",
