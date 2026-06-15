@@ -217,26 +217,26 @@ export const projects = [
 export const skills = [
   {
     category: "languages",
-    items: "Java, Python, C++, JavaScript, TypeScript, SQL, Dart",
+    items: "Java, Python, JavaScript, TypeScript, Node.js, SQL, Dart",
   },
   {
     category: "backend",
-    items: "FastAPI, Node.js, REST APIs, WebSockets, Microservices, Event-Driven Systems, Background Workers",
+    items: "FastAPI, Distributed Systems, Microservices, Event-Driven Architecture, Multi-tenancy, REST APIs, WebSockets, Message Queues, Rate Limiting, Background Workers, Socket.IO",
   },
   {
     category: "data & infrastructure",
-    items: "Kafka, PostgreSQL, Redis, BullMQ, pgvector, BM25, HNSW, Vector Search",
+    items: "Apache Kafka, PostgreSQL, PostGIS, Redis, pgvector, BM25, HNSW, Distributed Caching, BullMQ",
   },
   {
-    category: "ai & retrieval",
-    items: "RAG, Embeddings, LLM APIs, Hybrid Retrieval, LLM Caching, Semantic Caching, Retrieval Evaluation",
+    category: "ai/ml",
+    items: "RAG, Vector Search, LLM APIs, Hybrid Retrieval, LLM Caching, Semantic Caching, Embeddings, Collaborative Filtering, Retrieval Evaluation",
   },
   {
     category: "cloud & devops",
-    items: "AWS EC2, AWS Lambda, Amazon SQS, Amazon ECR, AWS IoT Greengrass, Docker, Google Cloud Run",
+    items: "AWS (EC2, Lambda, SQS, IoT Greengrass, SES), Amazon ECR, Google Cloud Run, GCP, Firebase, Cloudflare, Docker, CI/CD",
   },
   {
     category: "security & systems",
-    items: "AOSP, Reverse Engineering, Ghidra, Frida, ClusterFuzz, ECDH-25519, XChaCha20-Poly1305, HMAC, Network Security",
+    items: "AOSP, Binary Analysis, Reverse Engineering, Ghidra, Frida, ClusterFuzz, ECDH-25519, XChaCha20-Poly1305, HMAC, Network Security",
   },
 ];
