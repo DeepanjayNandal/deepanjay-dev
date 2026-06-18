@@ -126,7 +126,7 @@ export const projects = [
     description:
       "An AI inference cache and semantic reuse engine designed to reduce repeated LLM calls, improve cached-response latency, and control unsafe reuse across context-dependent queries.",
     url: "https://github.com/DeepanjayNandal/BitMod--AI-Inference-Cache-Semantic-Reuse-Engine",
-    period: "personal project (january 2026)",
+    period: "january 2026",
     bullets: [
       "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, TTL/LRU eviction, and Bayesian evidence scoring, achieving up to 94% cache-hit rate in benchmark runs.",
       "Reduced cached-response latency to 71ms on average against a 12.5s uncached LLM-generation baseline, producing a measured 176x speedup for cache-resolved requests.",
@@ -172,7 +172,7 @@ export const projects = [
       "Real-time iOS dating platform backend built for Appy.yo as a client engagement, engineering matchmaking, persistent chat, geo-filtering, AI bio generation, and containerized deployment against evolving product requirements.",
     url: "https://github.com/DeepanjayNandal/weVibe-app",
     demoUrl: "https://www.youtube.com/watch?v=il7ff0XOEFY",
-    period: "backend developer (jan 2026 – apr 2026)",
+    period: "jan 2026 – apr 2026",
     institution: "appy.yo | asu ser 517 software factory capstone, team 19",
     bullets: [
       "Architected Socket.IO and Upstash Redis pub/sub event relay for horizontally scalable real-time matchmaking and persistent chat delivery across concurrent server instances.",
@@ -203,7 +203,7 @@ export const projects = [
     description:
       "A semantic web application using RDF/OWL knowledge graphs and SPARQL queries to compute nutritional profiles and suggest healthier ingredient alternatives.",
     url: "https://github.com/DeepanjayNandal/Nutritional-Calculator-Web-App",
-    period: "backend developer (september 2024 – november 2024)",
+    period: "september 2024 – november 2024",
     institution: "arizona state university",
     bullets: [
       "Built a Next.js/Node.js application that queries RDF/OWL nutrition data through SPARQL, mapping ingredient inputs to structured nutritional relationships.",
