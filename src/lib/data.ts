@@ -123,14 +123,15 @@ export const projects = [
   {
     title: "BitMod — AI Inference Cache & Semantic Reuse Engine",
     description:
-      "An AI inference cache and semantic reuse engine designed to reduce repeated LLM calls, improve cached-response latency, and control unsafe reuse across context-dependent queries.",
+      "A reverse proxy compatible with OpenAI, Anthropic, and Gemini API formats that sits between any application and any LLM provider, intercepting queries and serving semantically equivalent ones from cache, cutting latency and API costs without changing a line of application code.",
     url: "https://github.com/DeepanjayNandal/BitMod--AI-Inference-Cache-Semantic-Reuse-Engine",
     period: "january 2026",
     bullets: [
-      "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, TTL/LRU eviction, and Bayesian evidence scoring, achieving up to 94% cache-hit rate in benchmark runs.",
-      "Reduced cached-response latency to 71ms on average against a 12.5s uncached LLM-generation baseline, producing a measured 176x speedup for cache-resolved requests.",
+      "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, TTL/LRU eviction, and Bayesian evidence scoring, achieving up to 94% cache hit rate in benchmark runs.",
+      "Reduced cached response latency to 71ms on average against a 12.5s uncached LLM generation baseline, producing a measured 176x speedup for cache-resolved requests.",
       "Implemented pluggable provider, storage, and vector-index layers with threshold-tuned semantic matching and negative evidence controls to reduce stale or unsafe cache hits.",
-      "Projected up to 96% cost savings at scale by combining high cache-hit rates with token-reduction strategies for unresolved model calls.",
+      "Designed for multi-tenant deployments with namespace-scoped cache isolation per team or customer, and a bulk ingestion pipeline supporting 7 file formats that eliminates cold start by pre-seeding the cache with existing Q&A datasets.",
+      "Projected up to 96% cost savings at scale by combining high cache hit rates with token reduction strategies for unresolved model calls.",
     ],
     tags: ["Python", "FastAPI", "Embeddings", "Vector Search", "LLM Caching", "Semantic Caching", "Backend Infrastructure"],
     featured: true,
