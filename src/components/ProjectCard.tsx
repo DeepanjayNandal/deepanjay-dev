@@ -22,7 +22,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
   return (
     <div
-      className={`relative border border-slate-200 dark:border-slate-800 hover:border-accent transition-colors p-6 [&:hover_h3]:text-accent ${
+      className={`relative border border-slate-200 dark:border-slate-800 hover:border-accent dark:hover:border-accent transition-colors p-6 [&:hover_h3]:text-accent ${
         project.url ? "cursor-pointer" : ""
       }`}
     >

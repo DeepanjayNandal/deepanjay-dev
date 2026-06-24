@@ -81,7 +81,7 @@ export default function ContactPage() {
                 href={href}
                 target={external ? "_blank" : undefined}
                 rel={external ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-4 p-4 border border-neutral-200 dark:border-neutral-800 hover:border-accent rounded transition-colors [&:hover>div:first-child]:bg-accent [&:hover>div:first-child_svg]:text-white"
+                className="flex items-center gap-4 p-4 border border-neutral-200 dark:border-neutral-800 hover:border-accent rounded transition-colors [&:hover>div:first-child]:bg-orange-800 [&:hover>div:first-child_svg]:text-orange-200"
               >
                 <div className="p-2 bg-neutral-100 dark:bg-slate-800 rounded transition-colors">
                   <Icon className="w-5 h-5 text-neutral-600 dark:text-gray-400 transition-colors" />
