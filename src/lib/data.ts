@@ -131,7 +131,6 @@ export const projects = [
       "Reduced cached response latency to 71ms on average against a 12.5s uncached LLM generation baseline, producing a measured 176x speedup for cache-resolved requests.",
       "Implemented pluggable provider, storage, and vector-index layers with threshold-tuned semantic matching and negative evidence controls to reduce stale or unsafe cache hits.",
       "Designed for multi-tenant deployments with namespace-scoped cache isolation per team or customer, and a bulk ingestion pipeline supporting 7 file formats that eliminates cold start by pre-seeding the cache with existing Q&A datasets.",
-      "Projected up to 96% cost savings at scale by combining high cache hit rates with token reduction strategies for unresolved model calls.",
     ],
     tags: ["Python", "FastAPI", "Embeddings", "Vector Search", "LLM Caching", "Semantic Caching", "Backend Infrastructure"],
     featured: true,
