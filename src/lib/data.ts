@@ -40,14 +40,14 @@ export const work = [
     period: "jan 2026 – apr 2026",
     location: "remote",
     summary:
-      "Built and deployed the backend for WeVibe, a real-time iOS matchmaking platform for Appy.yo, covering matchmaking, messaging, geo-filtering, AI bio generation, and deployment on Google Cloud Run.",
+      "Real-time iOS dating platform backend built for Appy.yo as a client engagement, engineering matchmaking, persistent chat, geo-filtering, AI bio generation, and containerized deployment against evolving product requirements.",
     tags: ["Node.js", "TypeScript", "PostgreSQL", "PostGIS", "Socket.IO", "Upstash Redis", "Prisma", "Firebase Authentication", "Google Cloud Run", "Docker", "Google Gemini", "Jest"],
     featured: true,
     bullets: [
       "Built the real-time matchmaking and messaging backend using Node.js, TypeScript, Socket.IO, and Upstash Redis pub/sub for horizontally scalable event delivery, working directly against the iOS client throughout development.",
       "Implemented geo-filtering and race-condition-free concurrent pairing using PostGIS and PostgreSQL advisory locks across a 50km radius with a 2-day rematch cooldown.",
       "Integrated Google Gemini 2.5 Flash for AI-assisted bio generation with a custom prompt-injection guard, rate limiting (5 bios/day, 60s cooldown), and output validation, scoped to the sponsor's product requirements.",
-      "Deployed on Google Cloud Run via Docker with Firebase JWT authentication, Apple Sign-In with revocation, and signed Cloud Storage uploads, validated end-to-end across 17 Jest integration suites.",
+      "Deployed containerized backend on Google Cloud Run with Prisma ORM, signed Cloud Storage URLs, Firebase Cloud Messaging push notifications, and soft-delete with a 30-day grace period and daily hard-delete purge.",
     ],
   },
   {
@@ -143,7 +143,7 @@ export const projects = [
     period: "june 2025",
     bullets: [
       "Built hybrid legal search over 33,969 U.S. Code chunks using BM25 and HNSW-indexed pgvector, combining top-50 candidates from each method with min-max normalization and weighted score fusion.",
-      "Added LLM query rewriting via Groq before every retrieval pass to convert user questions into statutory terminology, improving MRR by 21% across 15 benchmark queries.",
+      "Added LLM query rewriting via Groq before every retrieval pass to convert user questions into statutory terminology, improving Mean Reciprocal Rank (MRR) by 21% across 15 benchmark queries.",
       "Validated retrieval quality with a custom evaluation harness measuring Precision@3, Recall@5, and MRR, with raw hybrid retrieval benchmarked at p50 6ms and max 22ms.",
       "Ingested 54 U.S. Code titles through a custom HTML parser with SHA256-based change detection, re-encoding embeddings only on text changes, and streamed answers token by token via FastAPI SSE.",
     ],
@@ -172,12 +172,12 @@ export const projects = [
     url: "https://github.com/DeepanjayNandal/weVibe-app",
     demoUrl: "https://www.youtube.com/watch?v=il7ff0XOEFY",
     period: "jan 2026 – apr 2026",
-    institution: "appy.yo | asu ser 517 software factory capstone, team 19",
+    institution: "Appy.yo",
     bullets: [
       "Architected Socket.IO and Upstash Redis pub/sub event relay for horizontally scalable real-time matchmaking and persistent chat delivery across concurrent server instances.",
       "Designed bidirectional weighted compatibility scoring across personality and lifestyle preferences, geo-filtered via PostGIS within a 50km radius, with PostgreSQL advisory locks preventing race conditions during concurrent pairing.",
       "Engineered Gemini 2.5 Flash bio generation with a custom prompt-injection guard, per-user rate limiting (5 bios/day, 60s cooldown, 500-character cap), and Firebase JWT plus Apple Sign-In with revocation on account deletion.",
-      "Deployed containerized backend on Google Cloud Run with Prisma ORM, signed Cloud Storage URLs, FCM push notifications, and soft-delete with a 30-day grace period and daily hard-delete purge.",
+      "Deployed containerized backend on Google Cloud Run with Prisma ORM, signed Cloud Storage URLs, Firebase Cloud Messaging push notifications, and soft-delete with a 30-day grace period and daily hard-delete purge.",
     ],
     tags: ["Node.js", "TypeScript", "PostgreSQL", "Socket.IO", "Upstash Redis", "PostGIS", "Prisma", "Firebase Authentication", "Google Cloud Run", "Docker", "Google Gemini", "FCM", "Jest"],
     featured: false,
@@ -191,7 +191,7 @@ export const projects = [
     bullets: [
       "Engineered a zero-knowledge messaging architecture using WebRTC DataChannels and a stateless Node.js signaling relay, where the server brokers only SDP/ICE handshakes and exits the message path once the peer-to-peer channel is established.",
       "Implemented end-to-end encryption using ECDH-25519 key exchange, HKDF-SHA-256 directional key derivation, and XChaCha20-Poly1305 AEAD, keeping message contents protected from the relay server.",
-      "Developed QR-based out-of-band pairing and per-contact session isolation to mitigate in-band MITM risk during setup, with automatic session key destruction and WebRTC peer disposal to preserve forward secrecy.",
+      "Developed QR-based out-of-band pairing and per-contact session isolation to mitigate in-band man-in-the-middle risk during setup, with automatic session key destruction and WebRTC peer disposal to preserve forward secrecy.",
       "Built a resilient SQLite outbox queue with exponential backoff and XChaCha20-Poly1305 encrypted blobs, enabling asynchronous message delivery without centralizing message history on third-party servers.",
     ],
     tags: ["Flutter", "WebRTC", "Node.js", "SQLite", "ECDH-25519", "HKDF-SHA-256", "XChaCha20-Poly1305", "Secure Messaging"],
