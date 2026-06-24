@@ -137,16 +137,16 @@ export const projects = [
     featured: true,
   },
   {
-    title: "CaseTally — AI-Powered Legal Search Platform",
+    title: "CaseTally — Legal Search Platform",
     description:
-      "Hybrid legal retrieval platform over U.S. Code data using custom XML ingestion, BM25 + HNSW pgvector retrieval, query rewriting, and retrieval-quality evaluation.",
+      "Hybrid legal retrieval platform over 33,969 U.S. Code chunks parsed from govinfo.gov HTML files, combining BM25 and HNSW pgvector retrieval, LLM query rewriting, and a retrieval evaluation harness.",
     url: "https://github.com/DeepanjayNandal/casetally",
     period: "june 2025",
     bullets: [
-      "Developed a hybrid legal retrieval engine combining BM25 keyword search and HNSW-indexed pgvector semantic similarity across 33,000+ U.S. Code chunks parsed through custom govinfo.gov XML ingestion.",
-      "Implemented query rewriting to normalize conversational legal questions into statutory terminology, improving retrieval quality for ambiguous legal queries.",
-      "Engineered a retrieval evaluation harness across 15 benchmark legal queries, measuring Precision@3, Recall@5, Mean Reciprocal Rank (MRR), p50 latency, and p95 latency.",
-      "Built an idempotent version-hashed ingestion pipeline and FastAPI streaming backend using Server-Sent Events (SSE), with hybrid retrieval benchmarked at p50 <35ms and p95 <100ms latency.",
+      "Built hybrid legal search over 33,969 U.S. Code chunks using BM25 and HNSW-indexed pgvector, combining top-50 candidates from each method with min-max normalization and weighted score fusion.",
+      "Added LLM query rewriting via Groq before every retrieval pass to convert user questions into statutory terminology, improving MRR by 21% across 15 benchmark queries.",
+      "Validated retrieval quality with a custom evaluation harness measuring Precision@3, Recall@5, and MRR, with raw hybrid retrieval benchmarked at p50 6ms and max 22ms.",
+      "Ingested 54 U.S. Code titles through a custom HTML parser with SHA256-based change detection, re-encoding embeddings only on text changes, and streamed answers token by token via FastAPI SSE.",
     ],
     tags: ["Python", "FastAPI", "PostgreSQL", "pgvector", "BM25", "HNSW", "Vector Search", "RAG", "Server-Sent Events"],
     featured: true,
