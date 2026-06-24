@@ -10,8 +10,8 @@ export default function Hero() {
       <div className="space-y-4">
         <h1 className="text-4xl font-bold animate-fade-in text-neutral-900 dark:text-white flex items-center gap-3">
           {personal.openToWork && <OpenToWork />}
-          <span className="inline-block hover:text-accent transition-colors cursor-default">
-            <ScrambleText text={personal.name} />
+          <span className="inline-block cursor-default">
+            <ScrambleText text={personal.name} className="hover:text-accent transition-colors" />
           </span>
         </h1>
         <SocialLinks />
