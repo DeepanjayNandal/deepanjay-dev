@@ -1,12 +1,16 @@
+"use client";
+
+import ScrambleText from "./ScrambleText";
+
 interface SectionHeadingProps {
-  children: React.ReactNode;
+  children: string;
 }
 
 export default function SectionHeading({ children }: SectionHeadingProps) {
   return (
     <h2 className="text-2xl font-bold mb-6 flex items-center text-neutral-900 dark:text-white">
       <span className="text-accent mr-2">*</span>
-      {children}
+      <ScrambleText text={children} className="hover:text-accent transition-colors" />
     </h2>
   );
 }
