@@ -10,7 +10,7 @@ export default function SectionHeading({ children }: SectionHeadingProps) {
   return (
     <h2 className="text-2xl font-bold mb-6 flex items-center text-neutral-900 dark:text-white">
       <span className="text-accent mr-2">*</span>
-      <ScrambleText text={children} className="hover:text-accent transition-colors" />
+      <ScrambleText text={children} />
     </h2>
   );
 }

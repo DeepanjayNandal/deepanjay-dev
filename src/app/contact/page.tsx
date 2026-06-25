@@ -59,7 +59,7 @@ export default function ContactPage() {
     <main className="animate-fade-in-up">
       <h1 className="text-4xl font-bold mb-4 text-neutral-900 dark:text-white flex items-center gap-2">
         <span className="text-accent">*</span>
-        <ScrambleText text="contact" className="hover:text-accent transition-colors" />
+        <ScrambleText text="contact" />
       </h1>
       <p className="text-neutral-600 dark:text-gray-400 mb-12 leading-relaxed">
         feel free to reach out. i&apos;m always open to conversations about technology,

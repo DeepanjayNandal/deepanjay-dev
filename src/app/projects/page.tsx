@@ -14,7 +14,7 @@ export default function ProjectsPage() {
     <main className="animate-fade-in-up">
       <h1 className="text-4xl font-bold mb-4 text-neutral-900 dark:text-white flex items-center gap-2">
         <span className="text-accent">*</span>
-        <ScrambleText text="projects" className="hover:text-accent transition-colors" />
+        <ScrambleText text="projects" />
       </h1>
       <p className="text-neutral-600 dark:text-gray-400 mb-12 leading-relaxed">
         here are some of the projects i&apos;ve worked on.
