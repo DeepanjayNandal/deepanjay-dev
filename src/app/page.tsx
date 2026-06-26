@@ -11,10 +11,10 @@ export default function Home() {
     <main>
       <Hero />
       <WorkSection />
-      <EducationSection />
-      <AwardsSection />
       <ProjectsPreview />
       <SkillsSection />
+      <EducationSection />
+      <AwardsSection />
       <Footer />
     </main>
   );
