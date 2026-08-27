@@ -19,7 +19,7 @@ export const work = [
   {
     company: "discover excellence llc",
     url: "https://dexusa.com/",
-    role: "software engineering intern",
+    role: "software engineer (contract)",
     period: "jan 2026 – jun 2026",
     location: "remote",
     summary:
