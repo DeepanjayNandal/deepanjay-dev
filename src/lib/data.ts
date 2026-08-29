@@ -39,7 +39,7 @@ export const work = [
     period: "jan 2026 – apr 2026",
     location: "remote",
     summary:
-      "Industry-sponsored capstone for Appy.yo, delivering the production backend for WeVibe, a real-time iOS matchmaking platform. Delivered across two-week sprints against evolving requirements, working directly with the sponsor's iOS team through review cycles.",
+      "Industry-sponsored capstone for Appy.yo, delivering the production backend for WeVibe, a real-time iOS matchmaking platform. Built end-to-end by the team working directly with the sponsor across two-week sprints, translating evolving product requirements into a shipped platform.",
     tags: ["Node.js", "TypeScript", "PostgreSQL", "PostGIS", "Socket.IO", "Upstash Redis", "Prisma", "Firebase Authentication", "Google Cloud Run", "Docker", "Google Gemini", "Jest"],
     featured: true,
     bullets: [
