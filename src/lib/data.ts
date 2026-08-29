@@ -123,7 +123,7 @@ export const projects = [
     description:
       "A reverse proxy compatible with OpenAI, Anthropic, and Gemini API formats that sits between any application and any LLM provider, intercepting queries and serving semantically equivalent ones from cache, cutting latency and API costs without changing a line of application code.",
     url: "https://github.com/DeepanjayNandal/BitMod--AI-Inference-Cache-Semantic-Reuse-Engine",
-    period: "january 2026",
+    period: "january – june 2026",
     bullets: [
       "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, TTL/LRU eviction, and Bayesian evidence scoring, achieving up to 94% cache hit rate in benchmark runs.",
       "Reduced cached response latency to 71ms on average against a 12.5s uncached LLM generation baseline, producing a measured 176x speedup for cache-resolved requests.",
@@ -138,7 +138,7 @@ export const projects = [
     description:
       "Hybrid legal retrieval platform over 33,969 U.S. Code chunks parsed from govinfo.gov HTML files, combining BM25 and HNSW pgvector retrieval, LLM query rewriting, and a retrieval evaluation harness.",
     url: "https://github.com/DeepanjayNandal/casetally",
-    period: "june 2025",
+    period: "june – december 2025",
     bullets: [
       "Built hybrid legal search over 33,969 U.S. Code chunks using BM25 and HNSW-indexed pgvector, combining top-50 candidates from each method with min-max normalization and weighted score fusion.",
       "Added LLM query rewriting via Groq before every retrieval pass to convert user questions into statutory terminology, improving Mean Reciprocal Rank (MRR) by 21% across 15 benchmark queries.",
