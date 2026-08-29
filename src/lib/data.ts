@@ -35,15 +35,15 @@ export const work = [
   {
     company: "appy.yo",
     url: "https://appyyo.vercel.app/",
-    role: "backend engineer",
+    role: "backend engineer — asu capstone (sponsored by appy.yo)",
     period: "jan 2026 – apr 2026",
     location: "remote",
     summary:
-      "Delivered the WeVibe backend as a client engagement for Appy.yo, working directly against the iOS client from requirements through to production deployment on Google Cloud Run.",
+      "Industry-sponsored capstone for Appy.yo, delivering the production backend for WeVibe, a real-time iOS matchmaking platform. Delivered across two-week sprints against evolving requirements, working directly with the sponsor's iOS team through review cycles.",
     tags: ["Node.js", "TypeScript", "PostgreSQL", "PostGIS", "Socket.IO", "Upstash Redis", "Prisma", "Firebase Authentication", "Google Cloud Run", "Docker", "Google Gemini", "Jest"],
     featured: true,
     bullets: [
-      "Built the real-time matchmaking and messaging backend using Node.js, TypeScript, Socket.IO, and Upstash Redis pub/sub for horizontally scalable event delivery, working directly against the iOS client throughout development.",
+      "Built the real-time matchmaking and messaging backend using Node.js, TypeScript, Socket.IO, and Upstash Redis pub/sub for horizontally scalable event delivery.",
       "Deployed containerized backend on Google Cloud Run with Prisma ORM, signed Cloud Storage URLs, Firebase Cloud Messaging push notifications, and soft-delete with a 30-day grace period and daily hard-delete purge.",
     ],
   },
