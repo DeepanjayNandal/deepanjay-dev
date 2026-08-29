@@ -7,9 +7,8 @@ export const personal = {
   linkedin: "https://www.linkedin.com/in/deepanjay-nandal/",
   resume: "/resume.pdf",
   openToWork: true,
-  openToRelocate: "bengaluru preferred",
   bio: [
-    "Backend and AI infrastructure engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments. Combines low-level systems and security depth from Android security work with hands-on AI infrastructure across semantic caching, hybrid retrieval, and event-driven pipelines.",
+    "Backend and AI infrastructure engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments. Combines low-level systems and security depth from Android security work with hands-on AI infrastructure across semantic caching and hybrid retrieval.",
     "Previously at Ittiam Systems, delivering CVE validation infrastructure for Google's Android Security team, authoring 50+ security tests merged into AOSP. At Discover Excellence, built Kafka-based event processing, Redis personalization, and fault-tolerant job pipelines for an AI eCommerce analytics platform. At Appy.yo, engineered the backend for WeVibe, a real-time iOS matchmaking platform deployed on Google Cloud Run.",
     "Recent projects: BitMod (9-layer LLM inference cache), CaseTally (hybrid legal RAG platform over 33k+ U.S. Code chunks), and Elastic Face Recognition (cloud and edge ML pipeline across EC2, Lambda, and Greengrass).",
   ],

@@ -21,9 +21,6 @@ export default function Hero() {
         <div className="flex items-center gap-2">
           <MapPin className="w-4 h-4" />
           {personal.location}
-          {personal.openToRelocate && (
-            <span className="text-neutral-500 dark:text-gray-400 text-sm">· {personal.openToRelocate}</span>
-          )}
         </div>
         <div className="flex items-center gap-2">
           <Building2 className="w-4 h-4" />
