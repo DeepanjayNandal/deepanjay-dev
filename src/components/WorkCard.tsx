@@ -19,7 +19,7 @@ export default function WorkCard({ job }: { job: WorkEntry }) {
 
   return (
     <div
-      className={`relative border border-slate-200 dark:border-slate-800 p-6 [&:hover_h3]:text-accent ${
+      className={`relative border border-slate-200 dark:border-slate-800 hover:border-accent dark:hover:border-accent transition-colors p-6 [&:hover_h3]:text-accent ${
         job.url ? "cursor-pointer" : ""
       }`}
     >
