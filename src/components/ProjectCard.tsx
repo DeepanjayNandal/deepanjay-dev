@@ -54,6 +54,31 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.description}
       </p>
 
+      {(project.url || project.demoUrl) && (
+        <div className="relative z-10 flex gap-4 mb-4">
+          {project.url && (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-accent hover:underline"
+            >
+              GitHub <ArrowUpRight className="w-3 h-3" />
+            </a>
+          )}
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-accent hover:underline"
+            >
+              Demo <ArrowUpRight className="w-3 h-3" />
+            </a>
+          )}
+        </div>
+      )}
+
       <button
         onClick={() => setExpanded(!expanded)}
         className="relative z-10 inline-flex items-center gap-1 text-neutral-600 dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors duration-200"
@@ -71,16 +96,6 @@ export default function ProjectCard({ project }: { project: Project }) {
             <p className="text-sm text-neutral-600 dark:text-gray-300">
               {project.note}
             </p>
-          )}
-          {project.demoUrl && (
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-sm text-accent hover:underline"
-            >
-              demo <ArrowUpRight className="w-3 h-3" />
-            </a>
           )}
           <div>
             <p className="text-xs text-neutral-900 dark:text-white uppercase tracking-widest mb-3">

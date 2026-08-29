@@ -7,9 +7,9 @@ export const personal = {
   linkedin: "https://www.linkedin.com/in/deepanjay-nandal/",
   resume: "/resume.pdf",
   openToWork: true,
-  openToRelocate: false,
+  openToRelocate: "bengaluru preferred",
   bio: [
-    "Backend and AI infrastructure engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments.",
+    "Backend and AI infrastructure engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments. Combines low-level systems and security depth from Android security work with hands-on AI infrastructure across semantic caching, hybrid retrieval, and event-driven pipelines.",
     "Previously at Ittiam Systems, delivering CVE validation infrastructure for Google's Android Security team, authoring 50+ security tests merged into AOSP. At Discover Excellence, built Kafka-based event processing, Redis personalization, and fault-tolerant job pipelines for an AI eCommerce analytics platform. At Appy.yo, engineered the backend for WeVibe, a real-time iOS matchmaking platform deployed on Google Cloud Run.",
     "Recent projects: BitMod (9-layer LLM inference cache), CaseTally (hybrid legal RAG platform over 33k+ U.S. Code chunks), and Elastic Face Recognition (cloud and edge ML pipeline across EC2, Lambda, and Greengrass).",
   ],
@@ -28,7 +28,7 @@ export const work = [
     featured: true,
     bullets: [
       "Built a high-throughput Kafka-based visitor intelligence pipeline processing 100k+ daily behavioral events at sub-40ms p95 latency, driving targeted discount outreach via AWS SES across eCommerce client stores.",
-      "Designed an in-memory Redis collaborative filtering layer for real-time product affinity scoring across multi-tenant workloads, driving a measurable lift in conversion.",
+      "Designed an in-memory Redis collaborative filtering layer for real-time product affinity scoring across multi-tenant workloads, serving recommendations without a separate model-serving hop.",
       "Served personalized product feeds at the edge via Cloudflare, achieving 92% cache hit rate and sub-30ms p95 latency for multi-tenant deployments.",
       "Implemented a fault-tolerant BullMQ background pipeline handling 50k+ daily jobs with guaranteed job delivery through persistent state, retries, exponential backoff, and idempotency keys.",
     ],
@@ -40,13 +40,11 @@ export const work = [
     period: "jan 2026 – apr 2026",
     location: "remote",
     summary:
-      "Real-time iOS dating platform backend built for Appy.yo as a client engagement, engineering matchmaking, persistent chat, geo-filtering, AI bio generation, and containerized deployment against evolving product requirements.",
+      "Delivered the WeVibe backend as a client engagement for Appy.yo, working directly against the iOS client from requirements through to production deployment on Google Cloud Run.",
     tags: ["Node.js", "TypeScript", "PostgreSQL", "PostGIS", "Socket.IO", "Upstash Redis", "Prisma", "Firebase Authentication", "Google Cloud Run", "Docker", "Google Gemini", "Jest"],
     featured: true,
     bullets: [
       "Built the real-time matchmaking and messaging backend using Node.js, TypeScript, Socket.IO, and Upstash Redis pub/sub for horizontally scalable event delivery, working directly against the iOS client throughout development.",
-      "Implemented geo-filtering and race-condition-free concurrent pairing using PostGIS and PostgreSQL advisory locks across a 50km radius with a 2-day rematch cooldown.",
-      "Integrated Google Gemini 2.5 Flash for AI-assisted bio generation with a custom prompt-injection guard, rate limiting (5 bios/day, 60s cooldown), and output validation, scoped to the sponsor's product requirements.",
       "Deployed containerized backend on Google Cloud Run with Prisma ORM, signed Cloud Storage URLs, Firebase Cloud Messaging push notifications, and soft-delete with a 30-day grace period and daily hard-delete purge.",
     ],
   },
@@ -154,11 +152,11 @@ export const projects = [
     title: "Elastic Face Recognition Cloud System",
     description:
       "A cloud and edge-based machine learning infrastructure project that evolved a face-recognition pipeline from EC2 autoscaling to serverless inference and edge-cloud processing using AWS SQS, Lambda, ECR, and IoT Greengrass.",
-    url: "",
+    url: "https://github.com/DeepanjayNandal/elastic-face-recognition",
     period: "august 2025 – december 2025",
     institution: "arizona state university",
     bullets: [
-      "Scaled face-recognition inference using MTCNN and FaceNet in PyTorch across 15 Amazon EC2 instances with a custom SQS-depth autoscaler, achieving 0.96s average latency under 100 concurrent requests with 100% classification accuracy.",
+      "Scaled face-recognition inference using MTCNN and FaceNet in PyTorch across 15 Amazon EC2 instances with a custom SQS-depth autoscaler, achieving 0.96s average latency under 100 concurrent requests.",
       "Re-architected the workflow into an event-driven serverless pipeline using Docker images on Amazon ECR, with AWS Lambda workers triggered asynchronously by Amazon SQS events to remove server management overhead.",
       "Built an edge-cloud hybrid pipeline using AWS IoT Greengrass and MQTT, running MTCNN detection on edge devices to short-circuit no-face cases before Lambda invocation, achieving ~776ms pipeline response time.",
     ],
@@ -168,7 +166,7 @@ export const projects = [
   {
     title: "WeVibe — Real-Time Matchmaking & Dating Platform",
     description:
-      "Real-time iOS dating platform backend built for Appy.yo as a client engagement, engineering matchmaking, persistent chat, geo-filtering, AI bio generation, and containerized deployment against evolving product requirements.",
+      "Real-time iOS matchmaking and dating platform backend: pub/sub event relay for scalable messaging, PostGIS geo-filtering with advisory-lock pairing, Gemini bio generation with prompt-injection guards, and containerized deployment on Google Cloud Run.",
     url: "https://github.com/DeepanjayNandal/weVibe-app",
     demoUrl: "https://www.youtube.com/watch?v=il7ff0XOEFY",
     period: "jan 2026 – apr 2026",
@@ -231,18 +229,18 @@ export const awards = [
 export const skills = [
   {
     category: "languages",
-    items: "Java, Python, Node.js, SQL, Dart",
+    items: "Python, TypeScript, Java, SQL",
   },
   {
     category: "backend",
-    items: "FastAPI, Distributed Systems, Microservices, Event-Driven Architecture, Multi-tenancy, REST APIs, WebSockets, Message Queues, Rate Limiting, Background Workers, Socket.IO",
+    items: "Node.js, FastAPI, Distributed Systems, Microservices, Event-Driven Architecture, Multi-tenancy, REST APIs, WebSockets, Message Queues, Rate Limiting, Background Workers, Socket.IO",
   },
   {
     category: "data & infrastructure",
     items: "Apache Kafka, PostgreSQL, PostGIS, Redis, pgvector, BM25, HNSW, Distributed Caching, BullMQ",
   },
   {
-    category: "ai/ml",
+    category: "ai infrastructure",
     items: "RAG, Vector Search, LLM APIs, Hybrid Retrieval, LLM Caching, Semantic Caching, Embeddings, Collaborative Filtering, Retrieval Evaluation",
   },
   {
