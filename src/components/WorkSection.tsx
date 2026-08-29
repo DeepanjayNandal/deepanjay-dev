@@ -10,12 +10,12 @@ export default function WorkSection() {
       <SectionHeading>work</SectionHeading>
       <div className="space-y-8">
         {featured.map((job) => (
-          <div key={job.company}>
+          <div key={job.company} className="border border-slate-200 dark:border-slate-800 hover:border-accent dark:hover:border-accent transition-colors p-6 [&:hover_h3]:text-accent">
             <a
               href={job.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block [&:hover_h3]:text-accent"
+              className="block"
             >
               <h3 className="text-xl font-semibold mb-1 text-neutral-900 dark:text-white transition-colors duration-200">
                 {job.company}
