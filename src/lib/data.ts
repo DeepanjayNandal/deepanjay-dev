@@ -155,7 +155,7 @@ export const projects = [
     period: "august 2025 – december 2025",
     institution: "arizona state university",
     bullets: [
-      "Scaled face-recognition inference using MTCNN and FaceNet in PyTorch across 15 Amazon EC2 instances with a custom SQS-depth autoscaler, achieving 0.96s average latency under 100 concurrent requests.",
+      "Scaled face-recognition inference using MTCNN and FaceNet in PyTorch across 15 Amazon EC2 instances with a custom SQS queue-depth autoscaler, achieving 0.96s average latency under 100 concurrent requests.",
       "Re-architected the workflow into an event-driven serverless pipeline using Docker images on Amazon ECR, with AWS Lambda workers triggered asynchronously by Amazon SQS events to remove server management overhead.",
       "Built an edge-cloud hybrid pipeline using AWS IoT Greengrass and MQTT, running MTCNN detection on edge devices to short-circuit no-face cases before Lambda invocation, achieving ~776ms pipeline response time.",
     ],
