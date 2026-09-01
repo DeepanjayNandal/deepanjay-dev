@@ -10,7 +10,7 @@ export const personal = {
   bio: [
     "Backend and AI infrastructure engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments. Combines low-level systems and security depth from Android security work with hands-on AI infrastructure across semantic caching and hybrid retrieval.",
     "Previously at Ittiam Systems, delivering CVE validation infrastructure for Google's Android Security team, authoring 50+ security tests merged into AOSP. At Discover Excellence, built Kafka-based event processing, Redis personalization, and fault-tolerant job pipelines for an AI eCommerce analytics platform. At Appy.yo, engineered the backend for WeVibe, a real-time iOS matchmaking platform deployed on Google Cloud Run.",
-    "Recent projects: BitMod (9-layer LLM inference cache), CaseTally (hybrid legal RAG platform over 33k+ U.S. Code chunks), and Elastic Face Recognition (cloud and edge ML pipeline across EC2, Lambda, and Greengrass).",
+    "Recent projects: BitMod (9-layer LLM inference cache), CaseTally (hybrid legal RAG platform over 83k+ U.S. Code chunks), and Elastic Face Recognition (cloud and edge ML pipeline across EC2, Lambda, and Greengrass).",
   ],
 };
 
@@ -120,31 +120,35 @@ export const projects = [
   {
     title: "BitMod — AI Inference Cache & Semantic Reuse Engine",
     description:
-      "A reverse proxy compatible with OpenAI, Anthropic, and Gemini API formats that sits between any application and any LLM provider, intercepting queries and serving semantically equivalent ones from cache, cutting latency and API costs without changing a line of application code.",
+      "A drop-in reverse proxy compatible with OpenAI, Anthropic, and Gemini API formats that sits between any application and any LLM provider, intercepting queries and serving semantically equivalent ones from cache, cutting latency and API costs without changing a line of application code.",
     url: "https://github.com/DeepanjayNandal/BitMod--AI-Inference-Cache-Semantic-Reuse-Engine",
     period: "january – june 2026",
     bullets: [
-      "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, TTL/LRU eviction, and Bayesian evidence scoring, achieving up to 94% cache hit rate in benchmark runs.",
+      "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, and Bayesian evidence scoring, achieving up to 94% cache hit rate in benchmark runs.",
       "Reduced cached response latency to 71ms on average against a 12.5s uncached LLM generation baseline, producing a measured 176x speedup for cache-resolved requests.",
-      "Implemented pluggable provider, storage, and vector-index layers with threshold-tuned semantic matching and negative evidence controls to reduce stale or unsafe cache hits.",
-      "Designed for multi-tenant deployments with namespace-scoped cache isolation per team or customer, and a bulk ingestion pipeline supporting 7 file formats that eliminates cold start by pre-seeding the cache with existing Q&A datasets.",
+      "Implemented pluggable provider, storage, and vector-index layers behind typed interfaces with 29 adapter implementations, supporting 200+ OpenAI-compatible LLM endpoints, 4 databases, 3 vector stores, and 4 embedding providers as one-line config changes.",
+      "Enforced multi-tenant namespace isolation at the SQL layer, with every cache lookup — exact, fuzzy, semantic, and atomic-fact — scoped by namespace in the query itself rather than filtered at the API.",
+      "Designed cost-aware LRU eviction scoring entries by predicted future hits against the original LLM spend stored at write time, so an expensive recent answer outranks a cheap stale one at the same serve count.",
+      "Built a document ingestion pipeline parsing 7 file formats — PDF, DOCX, HTML, Markdown, CSV, JSON, and TXT — into chunked, embedded source sections available to the cache engine.",
+      "Shipped with 1,141 tests across Python 3.11, 3.12, and 3.13 with mypy strict typing, linting, and security scanning enforced on every commit through GitHub Actions.",
     ],
-    tags: ["Python", "FastAPI", "Embeddings", "Vector Search", "LLM Caching", "Semantic Caching", "Backend Infrastructure"],
+    tags: ["Python", "FastAPI", "Embeddings", "Vector Search", "LLM Caching", "Semantic Caching", "Backend Infrastructure", "Qdrant", "Hexagonal Architecture", "Reverse Proxy", "Multi-tenancy"],
     featured: true,
   },
   {
     title: "CaseTally — Legal Search Platform",
     description:
-      "Hybrid legal retrieval platform over 33,969 U.S. Code chunks parsed from govinfo.gov HTML files, combining BM25 and HNSW pgvector retrieval, LLM query rewriting, and a retrieval evaluation harness.",
+      "Hybrid legal retrieval platform over 83,706 U.S. Code chunks parsed from govinfo.gov HTML, combining BM25 and HNSW pgvector retrieval, LLM query rewriting, an asynchronous embedding worker, and a reproducible retrieval evaluation harness.",
     url: "https://github.com/DeepanjayNandal/casetally",
     period: "june – december 2025",
     bullets: [
-      "Built hybrid legal search over 33,969 U.S. Code chunks using BM25 and HNSW-indexed pgvector, combining top-50 candidates from each method with min-max normalization and weighted score fusion.",
-      "Added LLM query rewriting via Groq before every retrieval pass to convert user questions into statutory terminology, improving Mean Reciprocal Rank (MRR) by 21% across 15 benchmark queries.",
-      "Validated retrieval quality with a custom evaluation harness measuring Precision@3, Recall@5, and MRR, with raw hybrid retrieval benchmarked at p50 6ms and max 22ms.",
-      "Ingested 54 U.S. Code titles through a custom HTML parser with SHA256-based change detection, re-encoding embeddings only on text changes, and streamed answers token by token via FastAPI SSE.",
+      "Built hybrid legal search over 83,706 U.S. Code chunks using BM25 and HNSW-indexed pgvector, combining top-50 candidates from each method with min-max normalization and weighted score fusion.",
+      "Added LLM query rewriting via Groq before every retrieval pass to convert user questions into statutory terminology, improving Mean Reciprocal Rank by 10% across 15 benchmark queries — a deliberate trade-off, since Precision@3 and Recall@5 drop slightly as the expanded query widens the result window.",
+      "Validated retrieval quality with a custom evaluation harness measuring Precision@3, Recall@5, and MRR, deriving relevance structurally from citation metadata so the benchmark needs no hand-labeled data, with hybrid retrieval at p50 18ms and p95 36ms.",
+      "Ingested all 53 U.S. Code titles through a custom HTML parser with SHA256-based change detection, re-encoding embeddings only on text changes, and streamed answers token by token via FastAPI SSE.",
+      "Built an asynchronous embedding worker that treats the NULL embedding column as its own queue, claiming batches with FOR UPDATE SKIP LOCKED so concurrent workers never duplicate work and a crashed worker returns its rows automatically, with per-row retry accounting so one un-encodable chunk cannot stall the queue.",
     ],
-    tags: ["Python", "FastAPI", "PostgreSQL", "pgvector", "BM25", "HNSW", "Vector Search", "RAG", "Server-Sent Events"],
+    tags: ["Python", "FastAPI", "PostgreSQL", "pgvector", "BM25", "HNSW", "Vector Search", "RAG", "Server-Sent Events", "sentence-transformers", "Concurrency Control", "Retrieval Evaluation"],
     featured: true,
   },
   {
@@ -155,9 +159,10 @@ export const projects = [
     period: "august 2025 – december 2025",
     institution: "arizona state university",
     bullets: [
-      "Scaled face-recognition inference using MTCNN and FaceNet in PyTorch across 15 Amazon EC2 instances with a custom SQS queue-depth autoscaler, achieving 0.96s average latency under 100 concurrent requests.",
-      "Re-architected the workflow into an event-driven serverless pipeline using Docker images on Amazon ECR, with AWS Lambda workers triggered asynchronously by Amazon SQS events to remove server management overhead.",
-      "Built an edge-cloud hybrid pipeline using AWS IoT Greengrass and MQTT, running MTCNN detection on edge devices to short-circuit no-face cases before Lambda invocation, achieving ~776ms pipeline response time.",
+      "Scaled face-recognition inference using MTCNN and FaceNet in PyTorch across 15 Amazon EC2 instances with a custom SQS queue-depth autoscaler, counting in-flight messages alongside queue depth so workers aren't scaled in mid-inference, achieving 0.96s average latency under 100 concurrent requests.",
+      "Re-architected the workflow into an event-driven serverless pipeline using a single Docker image on Amazon ECR serving both Lambda functions via runtime command override, with workers triggered asynchronously by Amazon SQS events to remove server management overhead.",
+      "Built an edge-cloud hybrid pipeline using AWS IoT Greengrass and MQTT, running MTCNN detection on edge devices to short-circuit no-face cases before Lambda invocation, cutting response time roughly 2.3x from 1.78s to 776ms.",
+      "Chose a custom 2-second polling autoscaler over AWS Auto Scaling Groups, whose 1-minute minimum CloudWatch evaluation period cannot react inside a burst that drains in under a minute, and set SQS visibility timeout to 70s against a 60s Lambda timeout so redelivery can never duplicate in-flight work.",
     ],
     tags: ["AWS EC2", "Amazon SQS", "AWS Lambda", "Amazon ECR", "AWS IoT Greengrass", "MQTT", "Python", "Docker", "PyTorch", "MTCNN", "FaceNet"],
     featured: true,
@@ -232,15 +237,15 @@ export const skills = [
   },
   {
     category: "backend",
-    items: "Node.js, FastAPI, Distributed Systems, Microservices, Event-Driven Architecture, Multi-tenancy, REST APIs, WebSockets, Message Queues, Rate Limiting, Background Workers, Socket.IO",
+    items: "Node.js, FastAPI, Distributed Systems, Microservices, Event-Driven Architecture, Multi-tenancy, REST APIs, WebSockets, Message Queues, Rate Limiting, Background Workers, Socket.IO, Concurrency Control",
   },
   {
     category: "data & infrastructure",
-    items: "Apache Kafka, PostgreSQL, PostGIS, Redis, pgvector, BM25, HNSW, Distributed Caching, BullMQ",
+    items: "Apache Kafka, PostgreSQL, PostGIS, Redis, pgvector, BM25, HNSW, Distributed Caching, BullMQ, Qdrant, SQLite",
   },
   {
     category: "ai infrastructure",
-    items: "RAG, Vector Search, LLM APIs, Hybrid Retrieval, LLM Caching, Semantic Caching, Embeddings, Collaborative Filtering, Retrieval Evaluation",
+    items: "RAG, Vector Search, LLM APIs, Hybrid Retrieval, LLM Caching, Semantic Caching, Embeddings, Collaborative Filtering, Retrieval Evaluation, sentence-transformers",
   },
   {
     category: "cloud & devops",
