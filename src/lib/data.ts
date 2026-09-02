@@ -130,7 +130,7 @@ export const projects = [
       "Enforced multi-tenant namespace isolation at the SQL layer, with every cache lookup — exact, fuzzy, semantic, and atomic-fact — scoped by namespace in the query itself rather than filtered at the API.",
       "Designed cost-aware LRU eviction scoring entries by predicted future hits against the original LLM spend stored at write time, so an expensive recent answer outranks a cheap stale one at the same serve count.",
       "Built a document ingestion pipeline parsing 7 file formats — PDF, DOCX, HTML, Markdown, CSV, JSON, and TXT — into chunked, embedded source sections available to the cache engine.",
-      "Shipped with 1,168 tests across Python 3.11, 3.12, and 3.13 with mypy strict typing, linting, and security scanning enforced on every commit through GitHub Actions.",
+      "Shipped with 1,168 tests across Python 3.10, 3.11, 3.12, and 3.13 with mypy strict typing, linting, and security scanning enforced on every commit through GitHub Actions.",
     ],
     tags: ["Python", "FastAPI", "Embeddings", "Vector Search", "LLM Caching", "Semantic Caching", "Backend Infrastructure", "Qdrant", "Hexagonal Architecture", "Reverse Proxy", "Multi-tenancy"],
     featured: true,
