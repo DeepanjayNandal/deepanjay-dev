@@ -121,7 +121,7 @@ export const projects = [
     title: "BitMod — AI Inference Cache & Semantic Reuse Engine",
     description:
       "A drop-in reverse proxy compatible with OpenAI, Anthropic, and Gemini API formats that sits between any application and any LLM provider, intercepting queries and serving semantically equivalent ones from cache, cutting latency and API costs without changing a line of application code.",
-    url: "https://github.com/DeepanjayNandal/BitMod--AI-Inference-Cache-Semantic-Reuse-Engine",
+    url: "https://github.com/DeepanjayNandal/bitmod",
     period: "january – june 2026",
     bullets: [
       "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, and Bayesian evidence scoring, achieving up to 94% cache hit rate in benchmark runs.",
@@ -130,7 +130,7 @@ export const projects = [
       "Enforced multi-tenant namespace isolation at the SQL layer, with every cache lookup — exact, fuzzy, semantic, and atomic-fact — scoped by namespace in the query itself rather than filtered at the API.",
       "Designed cost-aware LRU eviction scoring entries by predicted future hits against the original LLM spend stored at write time, so an expensive recent answer outranks a cheap stale one at the same serve count.",
       "Built a document ingestion pipeline parsing 7 file formats — PDF, DOCX, HTML, Markdown, CSV, JSON, and TXT — into chunked, embedded source sections available to the cache engine.",
-      "Shipped with 1,141 tests across Python 3.11, 3.12, and 3.13 with mypy strict typing, linting, and security scanning enforced on every commit through GitHub Actions.",
+      "Shipped with 1,168 tests across Python 3.11, 3.12, and 3.13 with mypy strict typing, linting, and security scanning enforced on every commit through GitHub Actions.",
     ],
     tags: ["Python", "FastAPI", "Embeddings", "Vector Search", "LLM Caching", "Semantic Caching", "Backend Infrastructure", "Qdrant", "Hexagonal Architecture", "Reverse Proxy", "Multi-tenancy"],
     featured: true,
