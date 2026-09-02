@@ -126,7 +126,7 @@ export const projects = [
     bullets: [
       "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, and Bayesian evidence scoring, achieving up to 94% cache hit rate in benchmark runs.",
       "Reduced cached response latency to 71ms on average against a 12.5s uncached LLM generation baseline, producing a measured 176x speedup for cache-resolved requests.",
-      "Implemented pluggable provider, storage, and vector-index layers behind typed interfaces with 29 adapter implementations, supporting 200+ OpenAI-compatible LLM endpoints, 4 databases, 3 vector stores, and 4 embedding providers as one-line config changes.",
+      "Implemented pluggable provider, storage, and vector-index layers behind typed interfaces with 23 adapter implementations across 12 LLM providers, 4 databases, 4 embedding providers, and 3 vector stores, supporting 200+ OpenAI-compatible LLM endpoints as one-line config changes.",
       "Enforced multi-tenant namespace isolation at the SQL layer, with every cache lookup — exact, fuzzy, semantic, and atomic-fact — scoped by namespace in the query itself rather than filtered at the API.",
       "Designed cost-aware LRU eviction scoring entries by predicted future hits against the original LLM spend stored at write time, so an expensive recent answer outranks a cheap stale one at the same serve count.",
       "Built a document ingestion pipeline parsing 7 file formats — PDF, DOCX, HTML, Markdown, CSV, JSON, and TXT — into chunked, embedded source sections available to the cache engine.",
