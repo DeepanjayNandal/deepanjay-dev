@@ -37,7 +37,7 @@ export const work = [
     url: "https://appyyo.vercel.app/",
     role: "backend engineer — asu capstone (sponsored by appy.yo)",
     period: "jan 2026 – apr 2026",
-    location: "vancouver, british columbia, canada (remote)",
+    location: "vancouver, canada (remote)",
     summary:
       "Industry-sponsored capstone for Appy.yo, delivering the production backend for WeVibe, a real-time iOS matchmaking platform. Built end-to-end by the team working directly with the sponsor across two-week sprints, translating evolving product requirements into a shipped platform.",
     tags: ["Node.js", "TypeScript", "PostgreSQL", "PostGIS", "Socket.IO", "Upstash Redis", "Prisma", "Firebase Authentication", "Google Cloud Run", "Docker", "Google Gemini", "Jest"],
