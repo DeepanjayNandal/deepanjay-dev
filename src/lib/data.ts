@@ -20,7 +20,7 @@ export const work = [
     url: "https://dexusa.com/",
     role: "software engineer (contract)",
     period: "jan 2026 – jun 2026",
-    location: "remote",
+    location: "california, usa (remote)",
     summary:
       "Built and deployed production backend infrastructure for an AI-powered eCommerce analytics platform, focusing on high-throughput event processing, real-time personalization, and fault-tolerant job execution.",
     tags: ["Kafka", "Redis", "BullMQ", "Node.js", "TypeScript", "AWS SES", "Cloudflare"],
