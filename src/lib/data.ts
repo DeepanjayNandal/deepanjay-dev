@@ -86,7 +86,7 @@ export const work = [
     url: "https://prepinsta.com",
     role: "software engineering intern",
     period: "may 2020 – jun 2020",
-    location: "remote",
+    location: "delhi, india",
     summary:
       "Worked with the development team on a placement preparation platform, contributing to educational web pages, responsive student-facing interfaces, and coding-solution content.",
     tags: ["React", "JavaScript", "HTML/CSS", "Web Development"],
