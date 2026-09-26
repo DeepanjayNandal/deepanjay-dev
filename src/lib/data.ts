@@ -242,7 +242,7 @@ export const skills = [
   },
   {
     category: "data & infrastructure",
-    items: "Apache Kafka, PostgreSQL, PostGIS, Redis, pgvector, BM25, HNSW, Distributed Caching, BullMQ, Qdrant, SQLite",
+    items: "Apache Kafka, PostgreSQL, PostGIS, Redis, pgvector, HNSW, Distributed Caching, BullMQ, Qdrant, SQLite",
   },
   {
     category: "ai infrastructure",
