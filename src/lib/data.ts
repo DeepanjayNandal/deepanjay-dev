@@ -145,7 +145,7 @@ export const projects = [
     bullets: [
       "Built hybrid legal search over 83,706 U.S. Code chunks using PostgreSQL full-text search (ts_rank_cd) and HNSW-indexed pgvector, combining top-50 candidates from each method with min-max normalization and weighted score fusion.",
       "Added LLM query rewriting via Groq before every retrieval pass to convert user questions into statutory terminology, improving Mean Reciprocal Rank by 10% across 15 benchmark queries — a deliberate trade-off, since Precision@3 and Recall@5 drop slightly as the expanded query widens the result window.",
-      "Validated retrieval quality with a custom evaluation harness measuring Precision@3, Recall@5, and MRR, deriving relevance structurally from citation metadata so the benchmark needs no hand-labeled data, with hybrid retrieval at p50 18ms and p95 36ms.",
+      "Validated retrieval quality with a custom evaluation harness measuring Precision@3, Recall@5, and MRR, deriving relevance structurally from citation metadata so the benchmark needs no hand-labeled data, with hybrid retrieval at p50 18ms and p95 36ms without rewriting.",
       "Ingested all 53 U.S. Code titles through a custom HTML parser with SHA256-based change detection, re-encoding embeddings only on text changes, and streamed answers token by token via FastAPI SSE.",
       "Built an asynchronous embedding worker that treats the NULL embedding column as its own queue, claiming batches with FOR UPDATE SKIP LOCKED so concurrent workers never duplicate work and a crashed worker returns its rows automatically, with per-row retry accounting that is regression-tested by reverting the fix, so one un-encodable chunk cannot stall the queue.",
     ],
