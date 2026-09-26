@@ -124,13 +124,14 @@ export const projects = [
     url: "https://github.com/DeepanjayNandal/bitmod",
     period: "january – june 2026",
     bullets: [
-      "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, and Bayesian evidence scoring, achieving up to 94% cache hit rate in benchmark runs.",
-      "Reduced cached response latency to 71ms on average against a 12.5s uncached LLM generation baseline, producing a measured 176x speedup for cache-resolved requests.",
+      "Held the serve threshold at 0.85 after live sweeps: at 0.80 the cache over-served 158 of 375 held-out queries it had nothing cached for, at 0.85 it served none, because held-out confidence never rose above 0.8442.",
+      "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, and Bayesian evidence scoring, achieving 76% hit rate on a 50-query benchmark (100% on repeats, 53% on rephrasings, 0% on unseen questions, as intended). On a 1,500-query public customer-support corpus, it served 45.7% at the same threshold.",
+      "Measured 79.5–88.5ms median cached latency against 7.7–8.1s cold on self-hosted llama3.1:8b, over HTTP through the gateway, a 90.0–101.1x speedup computed within each of four committed runs.",
       "Implemented pluggable provider, storage, and vector-index layers behind typed interfaces with 23 adapter implementations across 12 LLM providers, 4 databases, 4 embedding providers, and 3 vector stores, supporting 200+ OpenAI-compatible LLM endpoints as one-line config changes.",
       "Enforced multi-tenant namespace isolation at the SQL layer, with every cache lookup — exact, fuzzy, semantic, and atomic-fact — scoped by namespace in the query itself rather than filtered at the API.",
       "Designed cost-aware LRU eviction scoring entries by predicted future hits against the original LLM spend stored at write time, so an expensive recent answer outranks a cheap stale one at the same serve count.",
       "Built a document ingestion pipeline parsing 7 file formats — PDF, DOCX, HTML, Markdown, CSV, JSON, and TXT — into chunked, embedded source sections available to the cache engine.",
-      "Shipped with 1,168 tests across Python 3.10, 3.11, 3.12, and 3.13 with mypy strict typing, linting, and security scanning enforced on every commit through GitHub Actions.",
+      "Shipped with 1,363 tests (1,330 passing, 33 backend-gated skips) across Python 3.10–3.13, with mypy type checking, linting, and security scanning (gitleaks, pip-audit, semgrep) enforced on every commit through GitHub Actions.",
     ],
     tags: ["Python", "FastAPI", "Embeddings", "Vector Search", "LLM Caching", "Semantic Caching", "Backend Infrastructure", "Qdrant", "Hexagonal Architecture", "Reverse Proxy", "Multi-tenancy"],
     featured: true,
@@ -138,17 +139,17 @@ export const projects = [
   {
     title: "CaseTally — Legal Search Platform",
     description:
-      "Hybrid legal retrieval platform over 83,706 U.S. Code chunks parsed from govinfo.gov HTML, combining BM25 and HNSW pgvector retrieval, LLM query rewriting, an asynchronous embedding worker, and a reproducible retrieval evaluation harness.",
+      "Hybrid legal retrieval platform over 83,706 U.S. Code chunks parsed from govinfo.gov HTML, combining PostgreSQL full-text search and HNSW pgvector retrieval, LLM query rewriting, an asynchronous embedding worker, and a reproducible retrieval evaluation harness.",
     url: "https://github.com/DeepanjayNandal/casetally",
     period: "june – december 2025",
     bullets: [
-      "Built hybrid legal search over 83,706 U.S. Code chunks using BM25 and HNSW-indexed pgvector, combining top-50 candidates from each method with min-max normalization and weighted score fusion.",
+      "Built hybrid legal search over 83,706 U.S. Code chunks using PostgreSQL full-text search (ts_rank_cd) and HNSW-indexed pgvector, combining top-50 candidates from each method with min-max normalization and weighted score fusion.",
       "Added LLM query rewriting via Groq before every retrieval pass to convert user questions into statutory terminology, improving Mean Reciprocal Rank by 10% across 15 benchmark queries — a deliberate trade-off, since Precision@3 and Recall@5 drop slightly as the expanded query widens the result window.",
       "Validated retrieval quality with a custom evaluation harness measuring Precision@3, Recall@5, and MRR, deriving relevance structurally from citation metadata so the benchmark needs no hand-labeled data, with hybrid retrieval at p50 18ms and p95 36ms.",
       "Ingested all 53 U.S. Code titles through a custom HTML parser with SHA256-based change detection, re-encoding embeddings only on text changes, and streamed answers token by token via FastAPI SSE.",
       "Built an asynchronous embedding worker that treats the NULL embedding column as its own queue, claiming batches with FOR UPDATE SKIP LOCKED so concurrent workers never duplicate work and a crashed worker returns its rows automatically, with per-row retry accounting that is regression-tested by reverting the fix, so one un-encodable chunk cannot stall the queue.",
     ],
-    tags: ["Python", "FastAPI", "PostgreSQL", "pgvector", "BM25", "HNSW", "Vector Search", "RAG", "Server-Sent Events", "sentence-transformers", "Concurrency Control", "Retrieval Evaluation"],
+    tags: ["Python", "FastAPI", "PostgreSQL", "pgvector", "PostgreSQL Full-Text Search", "HNSW", "Vector Search", "RAG", "Server-Sent Events", "sentence-transformers", "Concurrency Control", "Retrieval Evaluation"],
     featured: true,
   },
   {
