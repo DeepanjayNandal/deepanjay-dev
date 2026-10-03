@@ -8,9 +8,9 @@ export const personal = {
   resume: "/resume.pdf",
   openToWork: true,
   bio: [
-    "Backend and AI infrastructure engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments. Combines low-level systems and security depth from Android security work with hands-on AI infrastructure across semantic caching and hybrid retrieval.",
+    "Backend and AI infrastructure engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments. Combines low-level systems and security depth from Android security work with hands-on AI infrastructure across Kubernetes, semantic caching, and hybrid retrieval.",
     "Previously at Ittiam Systems, delivering CVE validation infrastructure for Google's Android Security team, authoring 50+ security tests merged into AOSP. At Discover Excellence, built Kafka-based event processing, Redis personalization, and fault-tolerant job pipelines for an AI eCommerce analytics platform. At Appy.yo, engineered the backend for WeVibe, a real-time iOS matchmaking platform deployed on Google Cloud Run.",
-    "Recent projects: BitMod (9-layer LLM inference cache), CaseTally (hybrid legal RAG platform over 83k+ U.S. Code chunks), and Elastic Face Recognition (cloud and edge ML pipeline across EC2, Lambda, and Greengrass).",
+    "Recent projects: BitMod (9-layer LLM inference cache), CaseTally (hybrid legal RAG over 83k+ U.S. Code chunks, running on Kubernetes with KEDA autoscaling), and Elastic Face Recognition (cloud and edge ML pipeline across EC2, Lambda, and Greengrass).",
   ],
 };
 
@@ -35,7 +35,7 @@ export const work = [
   {
     company: "appy.yo",
     url: "https://appyyo.vercel.app/",
-    role: "backend engineer — asu capstone (sponsored by appy.yo)",
+    role: "backend engineer, asu capstone (sponsored by appy.yo)",
     period: "jan 2026 – apr 2026",
     location: "vancouver, canada (remote)",
     summary:
@@ -118,7 +118,7 @@ export const education = [
 
 export const projects = [
   {
-    title: "BitMod — AI Inference Cache & Semantic Reuse Engine",
+    title: "BitMod: AI Inference Cache & Semantic Reuse Engine",
     description:
       "A drop-in reverse proxy compatible with OpenAI, Anthropic, and Gemini API formats that sits between any application and any LLM provider, intercepting queries and serving semantically equivalent ones from cache, cutting latency and API costs without changing a line of application code.",
     url: "https://github.com/DeepanjayNandal/bitmod",
@@ -128,28 +128,31 @@ export const projects = [
       "Engineered a 9-layer LLM cache proxy combining SHA-256 exact lookup, semantic embedding similarity, fuzzy matching, composable reuse, and Bayesian evidence scoring, achieving 76% hit rate on a 50-query benchmark (100% on repeats, 53% on rephrasings, 0% on unseen questions, as intended). On a 1,500-query public customer-support corpus, it served 45.7% at the same threshold.",
       "Measured 79.5–88.5ms median cached latency against 7.7–8.1s cold on self-hosted llama3.1:8b, over HTTP through the gateway, a 90.0–101.1x speedup computed within each of four committed runs.",
       "Implemented pluggable provider, storage, and vector-index layers behind typed interfaces with 23 adapter implementations across 12 LLM providers, 4 databases, 4 embedding providers, and 3 vector stores, supporting 200+ OpenAI-compatible LLM endpoints as one-line config changes.",
-      "Enforced multi-tenant namespace isolation at the SQL layer, with every cache lookup — exact, fuzzy, semantic, and atomic-fact — scoped by namespace in the query itself rather than filtered at the API.",
+      "Enforced multi-tenant namespace isolation at the SQL layer, with every cache lookup (exact, fuzzy, semantic, and atomic-fact) scoped by namespace in the query itself rather than filtered at the API.",
       "Designed cost-aware LRU eviction scoring entries by predicted future hits against the original LLM spend stored at write time, so an expensive recent answer outranks a cheap stale one at the same serve count.",
-      "Built a document ingestion pipeline parsing 7 file formats — PDF, DOCX, HTML, Markdown, CSV, JSON, and TXT — into chunked, embedded source sections available to the cache engine.",
+      "Built a document ingestion pipeline parsing 7 file formats (PDF, DOCX, HTML, Markdown, CSV, JSON, and TXT) into chunked, embedded source sections available to the cache engine.",
       "Shipped with 1,363 tests (1,330 passing, 33 backend-gated skips) across Python 3.10–3.13, with mypy type checking, linting, and security scanning (gitleaks, pip-audit, semgrep) enforced on every commit through GitHub Actions.",
     ],
     tags: ["Python", "FastAPI", "Embeddings", "Vector Search", "LLM Caching", "Semantic Caching", "Backend Infrastructure", "Qdrant", "Hexagonal Architecture", "Reverse Proxy", "Multi-tenancy"],
     featured: true,
   },
   {
-    title: "CaseTally — Legal Search Platform",
+    title: "CaseTally: Legal Search Platform",
     description:
-      "Hybrid legal retrieval platform over 83,706 U.S. Code chunks parsed from govinfo.gov HTML, combining PostgreSQL full-text search and HNSW pgvector retrieval, LLM query rewriting, an asynchronous embedding worker, and a reproducible retrieval evaluation harness.",
+      "Legal RAG platform over 83,706 U.S. Code chunks. It splits plain-English questions into legal issues, searches each one with hybrid PostgreSQL full-text and pgvector retrieval fused by RRF, and streams cited answers checked by a citation guard. Runs on Kubernetes with KEDA-autoscaled embedding workers.",
     url: "https://github.com/DeepanjayNandal/casetally",
     period: "june – december 2025",
     bullets: [
-      "Built hybrid legal search over 83,706 U.S. Code chunks using PostgreSQL full-text search (ts_rank_cd) and HNSW-indexed pgvector, combining top-50 candidates from each method with min-max normalization and weighted score fusion.",
-      "Added LLM query rewriting via Groq before every retrieval pass to convert user questions into statutory terminology, improving Mean Reciprocal Rank by 10% across 15 benchmark queries — a deliberate trade-off, since Precision@3 and Recall@5 drop slightly as the expanded query widens the result window.",
-      "Validated retrieval quality with a custom evaluation harness measuring Precision@3, Recall@5, and MRR, deriving relevance structurally from citation metadata so the benchmark needs no hand-labeled data, with hybrid retrieval at p50 18ms and p95 36ms without rewriting.",
-      "Ingested all 53 U.S. Code titles through a custom HTML parser with SHA256-based change detection, re-encoding embeddings only on text changes, and streamed answers token by token via FastAPI SSE.",
-      "Built an asynchronous embedding worker that treats the NULL embedding column as its own queue, claiming batches with FOR UPDATE SKIP LOCKED so concurrent workers never duplicate work and a crashed worker returns its rows automatically, with per-row retry accounting that is regression-tested by reverting the fix, so one un-encodable chunk cannot stall the queue.",
+      "Built hybrid legal search over 83,706 U.S. Code chunks, combining PostgreSQL full-text search (ts_rank_cd) and HNSW-indexed pgvector with reciprocal rank fusion (RRF), reaching MRR 0.85 and P@3 0.78 on a 15-query benchmark.",
+      "Added LLM issue decomposition: each question is split into 3 to 4 sub-queries in statutory language, searched in parallel and fused. On everyday questions it roughly doubles MRR (0.38 to about 0.81) and raises the share of expected statutes reaching the model from 63% to 88%, a measured trade-off against questions already written in legal language (MRR 0.85 to 0.72).",
+      "Cut search latency from p50 325ms to 45ms (p95 105ms) through profiling: a tiebreaker had silently disabled the HNSW index, ef_search was too low, Postgres memory was at its default, and torch oversubscribed the CPU. No loss in search quality.",
+      "Migrated the full stack to Kubernetes with a Postgres StatefulSet, Traefik ingress, health probes and an advisory-locked ingestion Job, achieving zero-downtime rollouts (240 requests, 0 failures) and a 73% smaller backend image by removing unused CUDA dependencies.",
+      "Built an embedding queue on the NULL embedding column with FOR UPDATE SKIP LOCKED, scaled by KEDA from 0 to 3 workers on queue depth, verifying 3,000/3,000 rows with zero loss or duplication across graceful shutdown and SIGKILL, and raising worker throughput 55% by fixing CPU throttling.",
+      "Added a citation guard that flags any statute the model cites but was never given, and explicit error events so failures show a clear message instead of a blank answer or a stuck spinner.",
+      "Built a retrieval evaluation harness measuring Precision@3, Recall@5 and MRR across three retrieval paths, pooling LLM-dependent runs with their ranges, and deriving relevance from citation structure so no hand-labeled data is needed.",
+      "Ingested all 53 U.S. Code titles through a custom HTML parser with SHA256 change detection, so a full re-run skips all 50,915 parsed section headings and changes nothing, and streamed answers token by token over FastAPI SSE.",
     ],
-    tags: ["Python", "FastAPI", "PostgreSQL", "pgvector", "PostgreSQL Full-Text Search", "HNSW", "Vector Search", "RAG", "Server-Sent Events", "sentence-transformers", "Concurrency Control", "Retrieval Evaluation"],
+    tags: ["Python", "FastAPI", "PostgreSQL", "pgvector", "PostgreSQL Full-Text Search", "HNSW", "Reciprocal Rank Fusion", "RAG", "Kubernetes", "KEDA", "Traefik", "Docker", "Server-Sent Events", "sentence-transformers", "Concurrency Control", "Retrieval Evaluation"],
     featured: true,
   },
   {
@@ -169,7 +172,7 @@ export const projects = [
     featured: true,
   },
   {
-    title: "WeVibe — Real-Time Matchmaking & Dating Platform",
+    title: "WeVibe: Real-Time Matchmaking & Dating Platform",
     description:
       "Real-time iOS matchmaking and dating platform backend: pub/sub event relay for scalable messaging, PostGIS geo-filtering with advisory-lock pairing, Gemini bio generation with prompt-injection guards, and containerized deployment on Google Cloud Run.",
     url: "https://github.com/DeepanjayNandal/weVibe-app",
@@ -186,7 +189,7 @@ export const projects = [
     featured: false,
   },
   {
-    title: "LexLink — Zero-Knowledge Secure Legal Messaging",
+    title: "LexLink: Zero-Knowledge Secure Legal Messaging",
     description:
       "A zero-knowledge attorney-client messaging system using peer-to-peer WebRTC communication, out-of-band authentication, and ephemeral cryptography to keep the signaling server blind to message content.",
     url: "https://github.com/DeepanjayNandal/lexlink",
@@ -201,7 +204,7 @@ export const projects = [
     featured: false,
   },
   {
-    title: "Nutritional Calculator — Semantic Web Food Intelligence",
+    title: "Nutritional Calculator: Semantic Web Food Intelligence",
     description:
       "A semantic web application using RDF/OWL knowledge graphs and SPARQL queries to compute nutritional profiles and suggest healthier ingredient alternatives.",
     url: "https://github.com/DeepanjayNandal/Nutritional-Calculator-Web-App",
@@ -246,11 +249,11 @@ export const skills = [
   },
   {
     category: "ai infrastructure",
-    items: "RAG, Vector Search, LLM APIs, Hybrid Retrieval, LLM Caching, Semantic Caching, Embeddings, Collaborative Filtering, Retrieval Evaluation, sentence-transformers",
+    items: "RAG, Vector Search, LLM APIs, Hybrid Retrieval, LLM Caching, Semantic Caching, Embeddings, Collaborative Filtering, Retrieval Evaluation, sentence-transformers, Reciprocal Rank Fusion, Query Decomposition",
   },
   {
     category: "cloud & devops",
-    items: "AWS (EC2, Lambda, SQS, IoT Greengrass, SES), Amazon ECR, Google Cloud Run, GCP, Firebase, Cloudflare, Docker, CI/CD",
+    items: "Kubernetes, KEDA, Traefik, AWS (EC2, Lambda, SQS, IoT Greengrass, SES), Amazon ECR, Google Cloud Run, GCP, Firebase, Cloudflare, Docker, CI/CD",
   },
   {
     category: "security & systems",
