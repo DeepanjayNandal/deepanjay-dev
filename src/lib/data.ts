@@ -224,12 +224,6 @@ export const awards = [
   {
     title: "Spot Award",
     company: "ittiam systems",
-    period: "october 2023",
-    description: "employee of the month recognition.",
-  },
-  {
-    title: "Spot Award",
-    company: "ittiam systems",
     period: "august 2022",
     description: "employee of the month recognition.",
   },
