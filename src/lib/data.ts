@@ -54,15 +54,16 @@ export const work = [
     period: "mar 2022 – jun 2024",
     location: "bangalore, india",
     summary:
-      "Built CVE validation tooling and automated pipelines for Google's Android Security team, working directly with Google engineers across vulnerability reproduction, binary analysis, and security test authorship upstreamed into AOSP.",
-    tags: ["Python", "Android/AOSP", "CTS", "STS", "Ghidra", "Frida", "ClusterFuzz", "PostgreSQL", "GCP", "Docker", "REST APIs", "Google Gerrit", "Binary Analysis"],
+      "Validated Android security fixes for Google's Android Security team, working directly with Google engineers to reproduce vulnerabilities, reverse-engineer binaries, and author CTS/STS tests upstreamed into AOSP.",
+    tags: ["Android/AOSP", "CTS", "STS", "Ghidra", "IDA Pro", "Frida", "ClusterFuzz", "Google Gerrit", "Binary Analysis", "Reverse Engineering", "Assembly", "Fuzzing", "Java", "JavaScript"],
     featured: true,
     bullets: [
-      "Authored 50+ CTS/STS validation tests, each proving a CVE patch, merged into the public Android Open Source Project (AOSP) through Google's review and Gerrit submission process.",
-      "Developed a Ghidra-based binary analysis approach for the Android Bluetooth stack that Google had marked infeasible, adopted as the team-wide standard and enabling 40+ Bluetooth CVEs to be validated to date.",
-      "Engineered a Frida instrumentation framework in Python and Java to hook private Android methods at runtime, enabling the team to reproduce 30+ CVEs that standard testing could not reach.",
-      "Built a GCP Python pipeline to ingest ClusterFuzz crash outputs across Dockerized environments, auto-classifying reports by CVSS severity into a PostgreSQL-backed schema, cutting manual triage overhead by 35%.",
-      "Automated Google Gerrit CI/CD workflows via idempotent webhook-triggered Python scripts, handling 30 to 40 CVE submissions per month.",
+      "Wrote 50+ CTS/STS tests, each proving a CVE patch, merged into the public Android Open Source Project (AOSP) through Google's review process, across Bluetooth, Media, and core AOSP modules.",
+      "Reverse-engineered stripped Bluetooth binaries with Ghidra to find internal functions with no exposed symbol, then wrote CTS/STS tests for Bluetooth CVEs that standard testing couldn't reach, using an approach Google had deemed infeasible.",
+      "Hooked inaccessible Android methods at runtime with Frida to reach Java-layer vulnerable code that tests couldn't call directly, reproducing and validating CVEs the team couldn't otherwise reach.",
+      "Read vendor firmware at the assembly level with Ghidra and IDA Pro to check whether security fixes were present in OEM builds (Motorola and others), comparing against the official AOSP patches.",
+      "Triaged fuzzer-found crashes from ClusterFuzz by reproducing the crash and tracing the code path from entry to the exact failing line, documenting the root cause (file, function, and line) for reviewer verification.",
+      "Mentored fellow engineers on CTS/STS test writing, crash triage, code reviews, and security validation.",
     ],
   },
   {
@@ -257,6 +258,6 @@ export const skills = [
   },
   {
     category: "security & systems",
-    items: "AOSP, Binary Analysis, Reverse Engineering, Ghidra, Frida, ClusterFuzz, ECDH-25519, XChaCha20-Poly1305, HMAC, Network Security",
+    items: "AOSP, Binary Analysis, Reverse Engineering, Ghidra, IDA Pro, Frida, ClusterFuzz, ECDH-25519, XChaCha20-Poly1305, HMAC, Network Security",
   },
 ];
