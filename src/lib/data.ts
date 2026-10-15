@@ -1,6 +1,6 @@
 export const personal = {
   name: "deepanjay nandal",
-  role: "backend & ai infrastructure engineer",
+  role: "senior software engineer",
   location: "bengaluru, karnataka, india",
   email: "deepanjay.nandal12@gmail.com",
   github: "https://github.com/DeepanjayNandal",
@@ -8,7 +8,7 @@ export const personal = {
   resume: "/resume.pdf",
   openToWork: true,
   bio: [
-    "Backend and AI infrastructure engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments. Combines low-level systems and security depth from Android security work with hands-on AI infrastructure across Kubernetes, semantic caching, and hybrid retrieval.",
+    "Senior software engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments. Combines low-level systems and security depth from Android security work with hands-on AI infrastructure across Kubernetes, semantic caching, and hybrid retrieval.",
     "Previously at Ittiam Systems, validating CVEs for Google's Android Security team and authoring 50+ security tests merged into AOSP. At Discover Excellence, built Kafka-based event processing, Redis personalization, and fault-tolerant job pipelines for an AI eCommerce analytics platform. At Appy.yo, engineered the backend for WeVibe, a real-time iOS matchmaking platform deployed on Google Cloud Run.",
     "Recent projects: BitMod (9-layer LLM inference cache), CaseTally (hybrid legal RAG over 83k+ U.S. Code chunks, running on Kubernetes with KEDA autoscaling), and Elastic Face Recognition (cloud and edge ML pipeline across EC2, Lambda, and Greengrass).",
   ],
