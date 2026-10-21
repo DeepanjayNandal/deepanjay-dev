@@ -8,8 +8,8 @@ export const personal = {
   resume: "/resume.pdf",
   openToWork: true,
   bio: [
-    "Senior software engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments. Combines low-level systems and security depth from Android security work with hands-on AI infrastructure across Kubernetes, semantic caching, and hybrid retrieval.",
-    "Previously at Ittiam Systems, validating CVEs for Google's Android Security team and authoring 50+ security tests merged into AOSP. At Discover Excellence, built Kafka-based event processing, Redis personalization, and fault-tolerant job pipelines for an AI eCommerce analytics platform. At Appy.yo, engineered the backend for WeVibe, a real-time iOS matchmaking platform deployed on Google Cloud Run.",
+    "Senior Software Engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments. Combines low-level systems and security depth from Android security work with hands-on AI infrastructure across Kubernetes, AI agents, semantic caching, and hybrid retrieval.",
+    "Previously at Ittiam Systems, validating CVEs for Google's Android Security team and authoring 50+ security tests merged into AOSP. At Discover Excellence, built Kafka-based event processing, Redis personalization, and fault-tolerant job pipelines for an AI eCommerce analytics platform, alongside designing a Python-based AI sales-agent workflow for personalized customer outreach. At Appy.yo, engineered the backend for WeVibe, a real-time iOS matchmaking platform deployed on Google Cloud Run.",
     "Recent projects: BitMod (9-layer LLM inference cache), CaseTally (hybrid legal RAG over 83k+ U.S. Code chunks, running on Kubernetes with KEDA autoscaling), and Elastic Face Recognition (cloud and edge ML pipeline across EC2, Lambda, and Greengrass).",
   ],
 };
@@ -22,14 +22,14 @@ export const work = [
     period: "jan 2026 – jun 2026",
     location: "california, usa (remote)",
     summary:
-      "Built and deployed production backend infrastructure for an AI-powered eCommerce analytics platform, focusing on high-throughput event processing, real-time personalization, and fault-tolerant job execution.",
-    tags: ["Kafka", "Redis", "BullMQ", "Node.js", "TypeScript", "AWS SES", "Cloudflare"],
+      "Built scalable backend infrastructure for an AI-powered eCommerce analytics platform, combining high-throughput Kafka event processing, Redis-based personalization, and Cloudflare edge delivery. Designed a Python-based AI sales agent workflow using LLM tool calling, customer behavior analysis, and asynchronous job processing to drive personalized customer engagement and discount outreach.",
+    tags: ["Python", "Kafka", "Redis", "Celery", "OpenAI API", "LLM Tool Calling", "AWS SES", "Cloudflare"],
     featured: true,
     bullets: [
-      "Built a high-throughput Kafka-based visitor intelligence pipeline processing 100k+ daily behavioral events at sub-40ms p95 latency, driving targeted discount outreach via AWS SES across eCommerce client stores.",
-      "Designed an in-memory Redis collaborative filtering layer for real-time product affinity scoring across multi-tenant workloads, serving recommendations without a separate model-serving hop.",
-      "Served personalized product feeds at the edge via Cloudflare, achieving 92% cache hit rate and sub-30ms p95 latency for multi-tenant deployments.",
-      "Implemented a fault-tolerant BullMQ background pipeline handling 50k+ daily jobs with guaranteed job delivery through persistent state, retries, exponential backoff, and idempotency keys.",
+      "Built a high-throughput Kafka-based visitor intelligence pipeline processing 100k+ daily behavioral events at sub-40ms p95 latency, identifying high-intent customer activity across multi-tenant eCommerce stores.",
+      "Designed a Python-based AI sales agent using OpenAI GPT-4.1 mini and tool calling to evaluate purchase history, cart behavior, and discount eligibility, dynamically selecting personalized offers, reminders, or no action for outreach via AWS SES.",
+      "Designed a Redis-based collaborative filtering layer for real-time product affinity scoring, serving personalized product feeds through Cloudflare with 92% cache hit rate and sub-30ms p95 latency across multi-tenant deployments.",
+      "Designed a Celery and Redis background workflow for asynchronous AI agent execution, with automatic retries, exponential backoff, and idempotency safeguards for reliable customer outreach.",
     ],
   },
   {
@@ -134,7 +134,7 @@ export const projects = [
       "Built a document ingestion pipeline parsing 7 file formats (PDF, DOCX, HTML, Markdown, CSV, JSON, and TXT) into chunked, embedded source sections available to the cache engine.",
       "Shipped with 1,363 tests (1,330 passing, 33 backend-gated skips) across Python 3.10–3.13, with mypy type checking, linting, and security scanning (gitleaks, pip-audit, semgrep) enforced on every commit through GitHub Actions.",
     ],
-    tags: ["Python", "FastAPI", "Embeddings", "Vector Search", "LLM Caching", "Semantic Caching", "Backend Infrastructure", "Qdrant", "Hexagonal Architecture", "Reverse Proxy", "Multi-tenancy"],
+    tags: ["Python", "FastAPI", "Embeddings", "Vector Search", "LLM Caching", "Semantic Caching", "Backend Infrastructure", "Hexagonal Architecture", "Reverse Proxy", "Multi-tenancy"],
     featured: true,
   },
   {
@@ -232,26 +232,26 @@ export const awards = [
 export const skills = [
   {
     category: "languages",
-    items: "Python, TypeScript, Java, SQL",
+    items: "Python, Java, SQL",
   },
   {
     category: "backend",
-    items: "Node.js, FastAPI, Distributed Systems, Microservices, Event-Driven Architecture, Multi-tenancy, REST APIs, WebSockets, Message Queues, Rate Limiting, Background Workers, Socket.IO, Concurrency Control",
+    items: "FastAPI, Distributed Systems, Microservices, Event-Driven Architecture, Multi-tenancy, REST APIs, WebSockets, Message Queues, Rate Limiting, Background Workers, Concurrency Control",
   },
   {
     category: "data & infrastructure",
-    items: "Apache Kafka, PostgreSQL, PostGIS, Redis, pgvector, HNSW, Distributed Caching, BullMQ, Qdrant, SQLite",
+    items: "Apache Kafka, PostgreSQL, PostGIS, Redis, pgvector, HNSW, Distributed Caching, Celery, SQLite",
   },
   {
     category: "ai infrastructure",
-    items: "RAG, Vector Search, LLM APIs, Hybrid Retrieval, LLM Caching, Semantic Caching, Embeddings, Collaborative Filtering, Retrieval Evaluation, sentence-transformers, Reciprocal Rank Fusion, Query Decomposition",
+    items: "RAG, Vector Search, LLM APIs, LLM Tool Calling, AI Agents, Hybrid Retrieval, LLM Caching, Semantic Caching, Embeddings, Collaborative Filtering, Retrieval Evaluation, sentence-transformers, Reciprocal Rank Fusion, Query Decomposition",
   },
   {
     category: "cloud & devops",
-    items: "Kubernetes, KEDA, Traefik, AWS (EC2, Lambda, SQS, IoT Greengrass, SES), Amazon ECR, Google Cloud Run, GCP, Firebase, Cloudflare, Docker, CI/CD",
+    items: "Kubernetes, KEDA, Traefik, AWS (EC2, Lambda, SQS, IoT Greengrass, SES), Amazon ECR, GCP, Firebase, Cloudflare, Docker, CI/CD",
   },
   {
     category: "security & systems",
-    items: "AOSP, Binary Analysis, Reverse Engineering, Ghidra, IDA Pro, Frida, ClusterFuzz, ECDH-25519, XChaCha20-Poly1305, HMAC, Network Security",
+    items: "AOSP, Binary Analysis, Reverse Engineering, Ghidra, IDA Pro, Frida, ClusterFuzz, ECDH-25519, XChaCha20-Poly1305",
   },
 ];
