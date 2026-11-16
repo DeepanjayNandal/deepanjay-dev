@@ -8,9 +8,9 @@ export const personal = {
   resume: "/resume.pdf",
   openToWork: true,
   bio: [
-    "Senior Software Engineer with an M.S. from Arizona State University and 3+ years of production experience across distributed systems, event-driven pipelines, LLM and RAG infrastructure, and cloud ML deployments. Combines low-level systems and security depth from Android security work with hands-on AI infrastructure across Kubernetes, AI agents, semantic caching, and hybrid retrieval.",
-    "Previously at Ittiam Systems, validating CVEs for Google's Android Security team and authoring 50+ security tests merged into AOSP. At Discover Excellence, built Kafka-based event processing, Redis personalization, and fault-tolerant job pipelines for an AI eCommerce analytics platform, alongside designing a Python-based AI sales-agent workflow for personalized customer outreach. At Appy.yo, engineered the backend for WeVibe, a real-time iOS matchmaking platform deployed on Google Cloud Run.",
-    "Recent projects: BitMod (9-layer LLM inference cache), CaseTally (hybrid legal RAG over 83k+ U.S. Code chunks, running on Kubernetes with KEDA autoscaling), and Elastic Face Recognition (cloud and edge ML pipeline across EC2, Lambda, and Greengrass).",
+    "Senior Software Engineer with an M.S. from Arizona State University and 3+ years of experience building AI infrastructure, agentic AI applications, and distributed systems. Experienced in GPT-4.1 mini agents, LangChain/LangGraph workflows, RAG, semantic caching, hybrid retrieval, and Kubernetes-based AI infrastructure.",
+    "Previously at Ittiam Systems, working with Google's Android Security team, validating CVEs and authoring 50+ security tests merged into AOSP. At Discover Excellence, developed a Python AI sales agent using LangChain for tool calling and LangGraph for stateful workflow orchestration with human-in-the-loop approvals, and built Kafka pipelines processing 100k+ daily events, Redis personalization, and reliable asynchronous outreach infrastructure. At Appy.yo, engineered the backend for WeVibe, a real-time iOS matchmaking platform deployed on Google Cloud Run.",
+    "Recent projects: CaseTally (legal RAG over 83k+ U.S. Code chunks with Kubernetes and KEDA autoscaling), BitMod (9-layer LLM inference cache with semantic reuse), and Elastic Face Recognition (cloud and edge ML pipeline across EC2, Lambda, and Greengrass).",
   ],
 };
 
@@ -22,14 +22,15 @@ export const work = [
     period: "jan 2026 – jun 2026",
     location: "california, usa (remote)",
     summary:
-      "Built scalable backend infrastructure for an AI-powered eCommerce analytics platform, combining high-throughput Kafka event processing, Redis-based personalization, and Cloudflare edge delivery. Designed a Python-based AI sales agent workflow using LLM tool calling, customer behavior analysis, and asynchronous job processing to drive personalized customer engagement and discount outreach.",
-    tags: ["Python", "Kafka", "Redis", "Celery", "OpenAI API", "LLM Tool Calling", "AWS SES", "Cloudflare"],
+      "Built scalable AI infrastructure for an eCommerce analytics platform, combining agentic AI workflows, high-throughput Kafka event processing, Redis-based personalization, and Cloudflare edge delivery. Developed a Python AI sales agent using GPT-4.1 mini, LangChain, and LangGraph to automate customer behavior analysis, personalized offers, and reliable outreach.",
+    tags: ["Python", "Kafka", "Redis", "Celery", "GPT-4.1 mini", "OpenAI API", "LangChain", "LangGraph", "LLM Tool Calling", "Stateful Workflows", "Human-in-the-Loop", "AWS SES", "Cloudflare"],
     featured: true,
     bullets: [
       "Built a high-throughput Kafka-based visitor intelligence pipeline processing 100k+ daily behavioral events at sub-40ms p95 latency, identifying high-intent customer activity across multi-tenant eCommerce stores.",
-      "Designed a Python-based AI sales agent using OpenAI GPT-4.1 mini and tool calling to evaluate purchase history, cart behavior, and discount eligibility, dynamically selecting personalized offers, reminders, or no action for outreach via AWS SES.",
+      "Developed a Python-based AI sales agent using GPT-4.1 mini and LangChain for LLM tool calling, analyzing purchase history, cart behavior, and discount eligibility to dynamically select personalized offers, reminders, or no action.",
+      "Implemented LangGraph-based stateful workflow orchestration covering customer analysis, discount validation, and human-in-the-loop manager approval for high-value discounts, with workflow resumption before scheduling outreach.",
       "Designed a Redis-based collaborative filtering layer for real-time product affinity scoring, serving personalized product feeds through Cloudflare with 92% cache hit rate and sub-30ms p95 latency across multi-tenant deployments.",
-      "Designed a Celery and Redis background workflow for asynchronous AI agent execution, with automatic retries, exponential backoff, and idempotency safeguards for reliable customer outreach.",
+      "Designed a Celery and Redis background workflow for asynchronous AI agent execution and AWS SES outreach, incorporating automatic retries, exponential backoff, and idempotency safeguards.",
     ],
   },
   {
@@ -55,7 +56,7 @@ export const work = [
     location: "bangalore, india",
     summary:
       "Validated Android security fixes for Google's Android Security team, working directly with Google engineers to reproduce vulnerabilities, reverse-engineer binaries, and author CTS/STS tests upstreamed into AOSP.",
-    tags: ["Android/AOSP", "CTS", "STS", "Ghidra", "IDA Pro", "Frida", "ClusterFuzz", "Google Gerrit", "Binary Analysis", "Reverse Engineering", "Assembly", "Fuzzing", "Java", "JavaScript"],
+    tags: ["Android/AOSP", "CTS", "STS", "Ghidra", "IDA Pro", "Frida", "ClusterFuzz", "Google Gerrit", "Binary Analysis", "Reverse Engineering", "Assembly", "Fuzzing", "Java", "JavaScript", "Python", "PostgreSQL", "Webhooks", "Test Automation"],
     featured: true,
     bullets: [
       "Wrote 50+ CTS/STS tests, each proving a CVE patch, merged into the public Android Open Source Project (AOSP) through Google's review process, across Bluetooth, Media, and core AOSP modules.",
@@ -63,6 +64,8 @@ export const work = [
       "Hooked inaccessible Android methods at runtime with Frida to reach Java-layer vulnerable code that tests couldn't call directly, reproducing and validating CVEs the team couldn't otherwise reach.",
       "Read vendor firmware at the assembly level with Ghidra and IDA Pro to check whether security fixes were present in OEM builds (Motorola and others), comparing against the official AOSP patches.",
       "Triaged fuzzer-found crashes from ClusterFuzz by reproducing the crash and tracing the code path from entry to the exact failing line, documenting the root cause (file, function, and line) for reviewer verification.",
+      "Built a Python pipeline to ingest and categorize ClusterFuzz crash reports, storing structured metadata in PostgreSQL and reducing manual triage time by 35%.",
+      "Developed webhook-driven automation for CTS/STS submissions, ensuring consistency and avoiding duplicates.",
       "Mentored fellow engineers on CTS/STS test writing, crash triage, code reviews, and security validation.",
     ],
   },
@@ -224,6 +227,12 @@ export const awards = [
   {
     title: "Spot Award",
     company: "ittiam systems",
+    period: "october 2023",
+    description: "employee of the month recognition.",
+  },
+  {
+    title: "Spot Award",
+    company: "ittiam systems",
     period: "august 2022",
     description: "employee of the month recognition.",
   },
@@ -244,7 +253,7 @@ export const skills = [
   },
   {
     category: "ai infrastructure",
-    items: "RAG, Vector Search, LLM APIs, LLM Tool Calling, AI Agents, Hybrid Retrieval, LLM Caching, Semantic Caching, Embeddings, Collaborative Filtering, Retrieval Evaluation, sentence-transformers, Reciprocal Rank Fusion, Query Decomposition",
+    items: "LangChain, LangGraph, LLM Agents, Tool Calling, Human-in-the-Loop, Stateful Workflows, RAG, Hybrid Retrieval, Vector Search, Reciprocal Rank Fusion (RRF), Semantic Caching, LLM Inference, Embeddings, Collaborative Filtering, Retrieval Evaluation, Query Decomposition, sentence-transformers, LLM APIs, LLM Tool Calling, AI Agents, LLM Caching",
   },
   {
     category: "cloud & devops",
