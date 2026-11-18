@@ -162,17 +162,18 @@ export const projects = [
   {
     title: "Elastic Face Recognition Cloud System",
     description:
-      "A cloud and edge-based machine learning infrastructure project that evolved a face-recognition pipeline from EC2 autoscaling to serverless inference and edge-cloud processing using AWS SQS, Lambda, ECR, and IoT Greengrass.",
+      "A cloud and edge-based machine learning infrastructure project that evolved a face-recognition pipeline across three architectures: EC2 autoscaling, event-driven serverless inference, and hybrid edge-cloud processing, optimizing scalability, infrastructure management, and inference latency.",
     url: "https://github.com/DeepanjayNandal/elastic-face-recognition",
     period: "august 2025 – december 2025",
     institution: "arizona state university",
     bullets: [
-      "Scaled face-recognition inference using MTCNN and FaceNet in PyTorch across 15 Amazon EC2 instances with a custom SQS queue-depth autoscaler, counting in-flight messages alongside queue depth so workers aren't scaled in mid-inference, achieving 0.96s average latency under 100 concurrent requests.",
-      "Re-architected the workflow into an event-driven serverless pipeline using a single Docker image on Amazon ECR serving both Lambda functions via runtime command override, with workers triggered asynchronously by Amazon SQS events to remove server management overhead.",
-      "Built an edge-cloud hybrid pipeline using AWS IoT Greengrass and MQTT, running MTCNN detection on edge devices to short-circuit no-face cases before Lambda invocation, cutting response time roughly 2.3x from 1.78s to 776ms.",
-      "Chose a custom 2-second polling autoscaler over AWS Auto Scaling Groups, whose 1-minute minimum CloudWatch evaluation period cannot react inside a burst that drains in under a minute, and set SQS visibility timeout to 70s against a 60s Lambda timeout so redelivery can never duplicate in-flight work.",
+      "Built and scaled a face-recognition pipeline using MTCNN and FaceNet in PyTorch, generating 512-dimensional embeddings for nearest-neighbor matching. Deployed Flask-based APIs with Amazon S3 storage and SQS messaging, scaling inference across 15 EC2 instances and achieving 0.96s average latency under 100 concurrent requests.",
+      "Engineered a custom Python autoscaler using Boto3, polling SQS every 2 seconds and tracking both pending and in-flight messages to prevent premature scale-in. Dynamically started and stopped preconfigured EC2 workers based on workload, avoiding the slower CloudWatch alarm-based scaling approach.",
+      "Re-architected the pipeline into an event-driven serverless system using AWS API Gateway, Lambda, SQS, Docker, and Amazon ECR. Integrated API Gateway authentication and request throttling, separated face detection and recognition into two Lambda functions sharing a single Docker image through runtime handler overrides, and configured asynchronous SQS triggers to eliminate custom inference-server management.",
+      "Built a hybrid Edge AI architecture using AWS IoT Greengrass, IoT Core, and MQTT, deploying MTCNN detection on an EC2-simulated edge device while retaining FaceNet recognition in AWS Lambda. Short-circuited images without faces before cloud inference, reducing average response latency approximately 2.3x from 1.78s to 776ms.",
+      "Automated AWS infrastructure deployment using Bash and AWS CLI, provisioning Lambda functions, ECR repositories, SQS queues, IAM execution roles, trust policies, and event-source mappings. Configured CloudWatch dashboards and alarms for Lambda execution metrics, errors, EC2 performance, and SQS queue depth, alongside a 70s SQS visibility timeout against a 60s Lambda timeout to reduce premature message redelivery.",
     ],
-    tags: ["AWS EC2", "Amazon SQS", "AWS Lambda", "Amazon ECR", "AWS IoT Greengrass", "MQTT", "Python", "Docker", "PyTorch", "MTCNN", "FaceNet"],
+    tags: ["Python", "Flask", "PyTorch", "MTCNN", "FaceNet", "AWS EC2", "Amazon S3", "Amazon SQS", "AWS Lambda", "Amazon ECR", "AWS API Gateway", "AWS IAM", "Amazon CloudWatch", "AWS IoT Greengrass", "AWS IoT Core", "MQTT", "Docker", "Boto3", "AWS CLI", "Bash", "Custom Autoscaling", "Event-Driven Architecture", "Serverless Computing", "Edge AI", "ML Inference"],
     featured: true,
   },
   {
@@ -245,7 +246,7 @@ export const skills = [
   },
   {
     category: "backend",
-    items: "FastAPI, Distributed Systems, Microservices, Event-Driven Architecture, Multi-tenancy, REST APIs, WebSockets, Message Queues, Rate Limiting, Background Workers, Concurrency Control",
+    items: "FastAPI, Flask, Distributed Systems, Microservices, Event-Driven Architecture, Multi-tenancy, REST APIs, WebSockets, Message Queues, Rate Limiting, Background Workers, Concurrency Control",
   },
   {
     category: "data & infrastructure",
@@ -253,11 +254,11 @@ export const skills = [
   },
   {
     category: "ai infrastructure",
-    items: "LangChain, LangGraph, LLM Agents, Tool Calling, Human-in-the-Loop, Stateful Workflows, RAG, Hybrid Retrieval, Vector Search, Reciprocal Rank Fusion (RRF), Semantic Caching, LLM Inference, Embeddings, Collaborative Filtering, Retrieval Evaluation, Query Decomposition, sentence-transformers, LLM APIs, LLM Tool Calling, AI Agents, LLM Caching",
+    items: "LangChain, LangGraph, LLM Agents, Tool Calling, Human-in-the-Loop, Stateful Workflows, RAG, Hybrid Retrieval, Vector Search, Reciprocal Rank Fusion (RRF), Semantic Caching, LLM Inference, Embeddings, Collaborative Filtering, Retrieval Evaluation, Query Decomposition, sentence-transformers, LLM APIs, LLM Tool Calling, AI Agents, LLM Caching, PyTorch",
   },
   {
     category: "cloud & devops",
-    items: "Kubernetes, KEDA, Traefik, AWS (EC2, Lambda, SQS, IoT Greengrass, SES), Amazon ECR, GCP, Firebase, Cloudflare, Docker, CI/CD",
+    items: "Kubernetes, KEDA, Traefik, AWS (EC2, S3, Lambda, SQS, API Gateway, IAM, CloudWatch, IoT Core, IoT Greengrass, SES), Amazon ECR, Boto3, AWS CLI, GCP, Firebase, Cloudflare, Docker, CI/CD",
   },
   {
     category: "security & systems",
